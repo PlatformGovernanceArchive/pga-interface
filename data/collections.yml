@@ -28,6 +28,8 @@
   icon: "FaRegHandPeace"
   articles:
     - file: ../content/welcome/index.md
+    - file: ../content/test/index.md
+    - file: ../content/test.md
 
 - id: features-and-nonfeatures
   title: Features and Non-Features
