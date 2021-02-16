@@ -1,0 +1,50 @@
+---
+
+platform: soundcloud
+date: 2014.12
+type: corporate-text
+
+---
+
+# SOUNDCLOUD AND COPYRIGHT: AN OVERVIEW
+Building a platform that helps creators of music & audio share their original content is at the heart of everything we do at SoundCloud. From the outset, we wanted to build a diverse, collaborative community of creators, where everyone gets credit for the content that they make and own, and where the rights of creators are respected. That’s one reason why we take copyright so seriously.
+
+## Understanding copyright
+
+We also take copyright seriously because it’s the law. The internet provides amazing opportunities for creators to reach millions of people around the world. Laws such as the Digital Millennium Copyright Act (DMCA) in the US, and other legislation in other countries, have helped enable this. But the existence of these laws doesn’t mean that companies like SoundCloud that provide content-sharing platforms, or the people who use these platforms, can ignore the rights of copyright owners. Copyright law ensures that copyright owners can control how their work is used — if a copyright owner decides that they don’t want their work appearing on SoundCloud, even in a way that others might think is promotional, that’s their right.
+
+We believe there’s a distinction between piracy, which is malicious and damaging to artists, and the use of someone else’s tracks in new, creative and transformative ways. The latter is an important form of creative expression, but that doesn’t mean it’s a free-for-all or something that exists outside the law. Generally speaking, the copyright owner still has the right to decide whether or not someone else should be allowed to remix their track and upload it to SoundCloud. If someone remixes a track without permission, they are likely infringing someone else’s rights. It doesn’t matter if the remixer credited the original artist, or that they’re not making any money from the track; in most cases, they still need permission. The same applies to DJ mixes, mashups, mixtapes and all other uses of someone else’s content. We expect everyone posting content to SoundCloud — whether they are a musician, producer, comedian, podcaster or anyone else — to have all permissions that they need; our system is focused on protecting, not clearing, these rights.
+
+## Creating an ecosystem where creativity thrives
+
+We want SoundCloud to be the place where all kinds of creativity thrive, and that means creating an ecosystem where copyright owners have control over the use of their work and can be compensated for it. When we launched On SoundCloud in late August of 2014, a key part of the program was to help creators to monetize their original content. In this initial phase, we’ve been joined by a wide range of Premier Partners, from up-and-coming indies to artists associated with major labels. However, this is just the beginning. You may have heard that we’ve added Warner Music Group to our list of Premier Partners. Working with them, along with other Premier Partners such as indie artist Sizzlebird, music label Spinnin’ Records, and podcast network Earwolf, is a step towards building a new creative ecosystem. We will always fight against piracy, but we are on a path that we hope will expand opportunities to DJs and producers who remix others’ content. No one has done this before. Some services have tried to use existing licensing models to clear some rights in some countries, but no one has solved this problem globally at scale. It’s a huge task that requires collaboration and buy-in from many different groups and rightsholders. It’s not going to happen overnight. But in time, we believe we can make it happen.
+
+There will be some short term pain. We are making some big moves and need to do this in the right way, which may mean that, as a listener, some content that you’re used to finding on SoundCloud may not be available for a short while. Rest assured, we’re doing everything we can to ensure that SoundCloud remains a truly global platform, where anyone can share their creations and connect with a worldwide audience in real time.
+
+In the meantime, we‘ll continue to ensure that artists and copyright owners have the tools they need to control how their work appears on SoundCloud. With that in mind, we wanted to take this opportunity to talk about the tools we have in place today — both automated and manual — and how we are using these to look out for the rights of creators.
+
+## Protecting copyright at SoundCloud
+
+Automated content identification on SoundCloud isn’t new. We implemented it back in 2010. Here’s how it works: when you upload a track, our system checks your upload against a database of tracks that copyright owners have asked us to block. If the system detects a match, then your upload is blocked, because that’s what the copyright owner has asked us to do. We also run the system in the background to make sure that we’re picking up infringing content on an ongoing basis after upload.  If we detect a match, the track will be removed.
+
+All kinds of people post to SoundCloud: major labels, indie labels, micro labels, artists, publishers, individual creators, and more. The system is looking out for all of them equally. We don’t choose or prioritize the identifications that the system makes which lead to takedowns. We don’t treat long pieces of content differently from shorter ones. We don’t give labels or anyone else access to the automated system to choose or prioritize the identifications, other than selecting which of their tracks they want blocked, and who (if anyone) should be allowed to upload their work without it being blocked. That means that when it comes to identifying copyright through our automated system, no content is favored over any other.
+
+In addition to the automated system, we have a manual takedown process. Manual takedowns happen when people submit a report directly using our webform, which can be found by clicking on the ‘Report Copyright Infringement’ button that appears on every track page. Anyone can report a copyright infringement if they are the relevant copyright owner, and every report results in the same thing: the reported content is removed from SoundCloud while the dispute is resolved. In some cases, copyright owners can remove content from SoundCloud directly using a takedown tool. This tool has been available for several years, and provides the most effective means for copyright owners to remove unauthorized content. SoundCloud is no different from other big hosting platforms in this respect, and our policy hasn’t changed because of any deals we’ve made with labels or other copyright owners. Copyright owners are not able to terminate anyone’s account — only SoundCloud can do this, and we will do it if we receive repeated reports of infringement. Whether a copyright owner removes content directly, or reports it to us for removal, the result is the same: the content is removed until the dispute can be resolved.
+
+Why remove the content first? Because that’s how the law works. That’s why all responsible user-generated content platforms operate in this way.
+
+Fundamentally, our approach to copyright protection hasn’t changed since we launched the platform in 2008. SoundCloud has always focused on the needs of creators, and that means protecting the rights of creators — if it seems like there’s been an increase in takedowns over the years, it’s because the amount of content and number of creators on SoundCloud have been growing, not because we’ve chosen, or been forced, to do things differently. We haven’t.
+
+## Resolving copyright disputes
+
+Mistakes can be made, particularly when using automated systems — sometimes tracks get mistakenly identified, and sometimes they get blocked when the person uploading them has the right to post them. For these reasons, anyone who has a track blocked or removed from SoundCloud is notified — every time — and has the opportunity to dispute that decision, every time. That is the same for all users, without exception, and applies to all blocked or removed tracks, without exception. We have a dedicated support team working across our global offices to manage takedowns and to help resolve disputes as quickly as possible.
+
+If a track gets flagged by our automated system or gets reported manually, that track is removed until the dispute can be resolved. The process is exactly the same whether you’re a bedroom DJ or an A-list artist. There have been several cases reported in the press where high-profile accounts have been impacted by our copyright policies — that’s always unfortunate, but it’s important to us that all creators on SoundCloud are treated equally when it comes to reported infringements.
+
+## Leveling up the copyright protection process
+
+As with all of our technology, we’re constantly working to improve things. In the case of content identification, that means working to increase the speed at which we can analyze content, but more importantly, to improve the system’s accuracy. No system is perfect, and we recognize how frustrating it is to have a track blocked or removed because our system thought it was something else. This creates work for you in filing disputes, and additional work for us in processing those disputes. Reducing the number of false positives remains a top priority for our team and the technology partners we work with.
+
+As we said, our ultimate goal is to create an ecosystem where new forms of creative expression can live, and to do so in a way that benefits everyone. That’s not going to happen overnight, but we are actively working towards it. Thank you for continuing to join us on the journey.
+
+If you find a track on SoundCloud that infringes your rights, you can report it to us here. If you want to talk to someone about adding your content to our automated content identification system, so that you can stop other people uploading it to SoundCloud, please contact us.
