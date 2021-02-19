@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // Importing bootstrap
 import Row from 'react-bootstrap/Row';

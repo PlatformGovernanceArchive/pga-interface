@@ -5,7 +5,7 @@ export const ExploreOtherScenarios = 'Explore other scenarios';
 export const ProceedToOtherPhase = 'Proceed to another phase';
 
 // Home
-export const Title = 'Digital Inclusion in Peacemaking';
+export const Title = 'The Platform Governance Archive 1.0';
 export const Slogan_1stPar = 'Digital technologies play a growing role in efforts to facilitate a peaceful settlement of armed conflict. Conflict parties and conflict stakeholders increasingly use digital technologies, and especially social media, to further their agendas and interests. Approaches to peace mediation need to respond to this trend. This online resource provides learning material for mediators and mediation support actors that wish to harness the opportunities of digital technologies for enhancing inclusion in peace processes.';
 export const Slogan_2ndPar = 'Digital inclusion can serve various strategic purposes. The four illustrative scenarios below present a range of use cases for digital inclusion, across different phases of the peace process. Each use case displays tags that specify the strategic purpose, and the functions and outputs of technology that help to achieve this specific purpose. The uses cases also highlight the most important risks and possible unintended consequences.';
 export const Disclaimer = 'This online resource is based on a one-year research project funded by the <a target="_blank" href="https://www.usip.org/">United States Institute of Peace (USIP)</a>. The project was implemented by Andreas Hirblinger (Graduate Institute of International and Development Studies, Geneva). The use cases were produced through a participatory online course, held in collaboration with <a target="_blank" href="http://www.howtobuildup.org/">Build Up</a>. The project team would like to thank all course participants who contributed their valuable experience and insights.';
@@ -49,8 +49,8 @@ export const Page_Framework = 'Conceptual framework';
 
 
 // Meta information
-export const Meta_PageTitle = 'Digital Inclusion in Peacemaking';
-export const Meta_Description = 'An online resource that provides learning material for mediators and mediation support actors that wish to harness the opportunities of digital technologies for enhancing inclusion in peace processes.';
+export const Meta_PageTitle = 'The Platform Governance Archive 1.0';
+export const Meta_Description = 'The Platform Governance Archive (PGA) is a structured and open database with content policies of key platforms over their full life-time.';
 
 
 

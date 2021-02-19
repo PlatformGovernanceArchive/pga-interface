@@ -10,8 +10,8 @@ import './pga.scss';
 
 // Importing bootstrap
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+//import Row from 'react-bootstrap/Row';
+//import Col from 'react-bootstrap/Col';
 
 // Importing components
 import Hero from './components/hero'
@@ -22,7 +22,7 @@ import Timeline from './components/Timeline';
 import PolicyOverview from './components/PolicyOverview';
 import ScrollToTop from './components/scrollToTop';
 import * as Strings from './constants';
-import { DataContext } from './contexts/dataContext'
+//import { DataContext } from './contexts/dataContext'
 
 const Home = () => (
   <Container fluid className="App home">

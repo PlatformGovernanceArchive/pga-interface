@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // Importing bootstrap
 import Jumbotron from 'react-bootstrap/Jumbotron'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+//import Container from 'react-bootstrap/Container';
+//import Row from 'react-bootstrap/Row';
+//import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
+/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 export default () => (
   <Jumbotron>
     <blockquote>
