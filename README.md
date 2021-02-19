@@ -1,8 +1,8 @@
 # Platform Governance Archive Interface
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and deployed with [Netlify](https://pga-interface.netlify.app/).
 
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/514d8f99-a1a6-4f3f-bd14-dd19a7fe8ef2/deploy-status)](https://app.netlify.com/sites/pga-interface/deploys)
 
 
 ## Available Scripts
@@ -32,8 +32,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-
-## project specific adjustments
+## PGA specific adjustments
 
 ### React Router
 Routing works with react router.
