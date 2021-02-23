@@ -104,7 +104,7 @@ $font-monospace: 'Droid Sans Mono', monospace;
         font-size: size('copy');
     }
     @else{
-        padding: 16px 24px;
+        padding: 12px 20px;
         font-size: size('big-copy');
     }
 
@@ -234,7 +234,7 @@ body{
 
 // resetting browser styles
 * {
-    line-height: 1.3em;
+    line-height: 1.4em;
 //    font-size: size('copy');
 }
 
@@ -346,18 +346,24 @@ ul{
             margin-bottom: 4em;
         }
 
-        button{
-            @include button(false, true, down, false)
-        }
+        .more{
+            display: inline-block;
+            align-self: center;
 
+            button{
+                @include button(false, true, down, false)
+            }
+        }
     }
 }
 
 .intro{
     background: linear-gradient(#0000, #000a);
+    padding-bottom: 4em;
 
     h2{
-        font-size: size('headline')
+        font-size: size('headline');
+        max-width: 70%;
     }
 
     p{
@@ -373,7 +379,7 @@ ul{
         }
     }
 
-    .paper button{
+    #paper button{
         @include button(false, true);
 
         align-self: end;

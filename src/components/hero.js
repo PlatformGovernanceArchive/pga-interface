@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactTypingEffect from 'react-typing-effect';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 // Importing bootstrap
 import Jumbotron from 'react-bootstrap/Jumbotron'
@@ -44,7 +45,14 @@ export default () => (
             }}
           />
         </p>
-        <button variant="secondary">Learn more</button>
+
+        <Link
+         className="more"
+         smooth={true}
+         offset={-20}
+         to="about">
+          <button>Learn more</button>
+        </Link>
     </Container>
   </Jumbotron>
 );

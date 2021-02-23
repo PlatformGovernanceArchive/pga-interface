@@ -10,7 +10,7 @@ import Col from 'react-bootstrap/Col';
 export default () => (
   <main className="intro">
     <Container>
-      <section className="about">
+      <section id="about">
         <Row>
           <Col sm="4" className="colTitle">
             <h2>About this project</h2>
@@ -20,7 +20,7 @@ export default () => (
           </Col>
         </Row>
       </section>
-      <section className="paper">
+      <section id="paper">
         <Row>
           <Col sm="4" className="colTitle">
             <h2>Data Paper 1.0</h2>
@@ -31,7 +31,7 @@ export default () => (
           </Col>
         </Row>
       </section>
-      <section className="contribute">
+      <section id="contribute">
         <Row>
           <Col sm="4" className="colTitle">
             <h2>How to contribute to and cite this project</h2>
