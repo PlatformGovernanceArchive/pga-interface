@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // Importing dependencies
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './pga.scss';
 
 // Importing bootstrap
-import Container from 'react-bootstrap/Container';
+//import Container from 'react-bootstrap/Container';
 //import Row from 'react-bootstrap/Row';
 //import Col from 'react-bootstrap/Col';
 
@@ -24,18 +24,21 @@ import ScrollToTop from './components/scrollToTop';
 import * as Strings from './constants';
 //import { DataContext } from './contexts/dataContext'
 
+// Importing background images
+import backgroundHome from "./assets/img/background-home.png";
+
 const Home = () => (
-  <Container fluid className="App home">
+  <div className="App home" style={{backgroundImage: 'url('+backgroundHome+')'}}>
     <Hero />
     <Intro />
-  </Container>
+  </div>
 )
 
 const PickPolicy = ({ match }) => (
-  <Container fluid className="App pick">
+  <div className="App pick">
     <Navbar />
     <PolicyOverview />
-  </Container>
+  </div>
 )
 
 const DocumentView = ({match}) => {
@@ -47,7 +50,7 @@ const DocumentView = ({match}) => {
   }
 
   return(
-    <Container fluid className="App">
+    <div className="App">
       <Navbar />
       <Document
         platform={match.params.platformSlug}
@@ -59,7 +62,7 @@ const DocumentView = ({match}) => {
           type={match.params.typeSlug}
           date={setDate}
       />
-    </Container>
+    </div>
   )
 }
 
@@ -74,14 +77,14 @@ const Page = ({ match }) => {
   const CurrentPage = components[match.params.page] || components['404'];
 
   return(
-    <Container fluid className={"App " + match.params.page}>
+    <div className={"App " + match.params.page}>
       <Navbar  page={match.params.page} />
       <CurrentPage />
-    </Container>
+    </div>
   )
 }
 
-class App extends Component {
+class App extends React.Component {
   componentDidMount() {
     console.log('App mounted:')
   }
