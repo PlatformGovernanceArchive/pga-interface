@@ -6,7 +6,7 @@ import PolicyOverview from './policyOverview';
 /* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 export default props => (
   <DataContext.Consumer>
-    {({platforms}) => (
+    {({ platforms }) => (
       <PolicyOverview
         platforms={platforms}
         {...props}

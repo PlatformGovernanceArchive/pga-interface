@@ -8,6 +8,7 @@
 // ==============================
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:300,400,500,600,700&subset=latin,latin-ext');
 
 //
 // Functions
@@ -65,7 +66,7 @@ $font-sizes: (
     'description':  16pt,
     'title':        24pt,
 
-    'headline':     16pt,
+    'headline':     14pt,
     'big-headline': 30pt,
 
     'tag':          10pt,
@@ -79,6 +80,7 @@ $break-points: (
     'wide-screen':  1400px
 );
 
+$font-regular: 'PT Sans', monospace;
 $font-monospace: 'Droid Sans Mono', monospace;
 
 
@@ -214,7 +216,7 @@ $font-monospace: 'Droid Sans Mono', monospace;
 //}
 
 body{
-    font-family: Roboto, sans-serif;
+    font-family: $font-regular;
     font-size: size('copy');
     color: white;
 //    margin: 0 auto;
@@ -222,7 +224,7 @@ body{
 }
 //
 //@include device('XL'){
-//    html{
+//    html{h2
 //        background: #666;
 //    }
 //
@@ -243,12 +245,12 @@ a{
     text-decoration: none;
 
     &:hover{
-        color: hiig('darkblue');
+        color: theme-color('grey');
         text-decoration: none;
     }
 
-    .pageContent &, .disclaimer &, .explanation & {
-        text-decoration: underline dotted 2px rgba(hiig('darkblue'), .4 );
+    .colContent &, .disclaimer &, .explanation & {
+        text-decoration: underline dotted 2px rgba(white, .8 );
     }
 }
 
@@ -291,7 +293,28 @@ ul{
 
 // Background
 #root{
-    background: transparent radial-gradient(closest-side at 64% 62%, #000000 0%, #081E26 57%, #0D232E 100%) 0% 0% no-repeat fixed;
+    background: transparent radial-gradient(
+        closest-side at 64% 62%,
+        #000000 0%,
+        #040E16 57%,
+        #08131E 100%
+    ) 0% 0% no-repeat fixed;
+}
+
+.logotype{
+    @include uppercase;
+
+    max-width: 8em;
+    text-align: right;
+    line-height: 1em;
+    font-weight: 600;
+
+    .version{
+        line-height: 1em;
+        font-size: 0.5em;
+        vertical-align: top;
+        padding-left: 0.5em;
+    }
 }
 
 // Intro
@@ -320,23 +343,8 @@ ul{
         }
 
         h1{
-            @include uppercase;
-
-            max-width: 8em;
             margin-left: auto;
-
             font-size: size('title');
-            text-align: right;
-            line-height: 1em;
-            font-weight: 600;
-
-            .version{
-                line-height: 1em;
-                font-size: 0.5em;
-                vertical-align: top;
-                padding-left: 0.5em;
-            }
-
         }
 
         .subtitle{
@@ -358,10 +366,12 @@ ul{
 }
 
 .intro{
-    background: linear-gradient(#0000, #000a);
+    background: linear-gradient(#0000, #000c);
     padding-bottom: 4em;
 
     h2{
+        @include uppercase;
+
         font-size: size('headline');
         max-width: 70%;
     }
@@ -387,10 +397,13 @@ ul{
 
 }
 
-
 .main-nav{
-    padding: 20px 0 50px;
     justify-content: flex-end;
+    background: none;
+
+    .logotype{
+        font-size: 0.6em;
+    }
 
     .col{
         text-transform: uppercase;

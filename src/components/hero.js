@@ -9,6 +9,11 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 //import Button from 'react-bootstrap/Button';
 
+// Importing Components
+import Logotype from './logotype'
+
+
+
 /* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 export default () => (
   <Jumbotron fluid>
@@ -16,7 +21,7 @@ export default () => (
         <blockquote>
           “The way platforms order and govern user activities has tremendous effects on how communication, politics, mobility and other key sectors are organised in the digital society.”
         </blockquote>
-        <h1>Platform Governance Archive<span className="version">1.0</span></h1>
+        <Logotype />
         <p className="subtitle">
           <ReactTypingEffect
             staticText="An archive of all policy documents by"

@@ -16,7 +16,7 @@ import './pga.scss';
 // Importing components
 import Hero from './components/hero'
 import Intro from './components/intro'
-import Navbar from './components/Navbar';
+import Navigation from './components/Navigation';
 import Document from './components/Document';
 import Timeline from './components/Timeline';
 import PolicyOverview from './components/PolicyOverview';
@@ -36,7 +36,7 @@ const Home = () => (
 
 const PickPolicy = ({ match }) => (
   <div className="App pick">
-    <Navbar />
+    <Navigation />
     <PolicyOverview />
   </div>
 )
@@ -51,7 +51,7 @@ const DocumentView = ({match}) => {
 
   return(
     <div className="App">
-      <Navbar />
+      <Navigation />
       <Document
         platform={match.params.platformSlug}
         type={match.params.typeSlug}
@@ -78,7 +78,7 @@ const Page = ({ match }) => {
 
   return(
     <div className={"App " + match.params.page}>
-      <Navbar  page={match.params.page} />
+      <Navigation  page={match.params.page} />
       <CurrentPage />
     </div>
   )
