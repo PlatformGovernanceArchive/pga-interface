@@ -1,4 +1,4 @@
-import React, {Fragement}  from 'react';
+import React, {Fragment}  from 'react';
 import SlidingPane from "react-sliding-pane";
 import "react-sliding-pane/dist/react-sliding-pane.css";
 
@@ -6,10 +6,10 @@ import "react-sliding-pane/dist/react-sliding-pane.css";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavItem from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/Nav';
-import Form from 'react-bootstrap/Form'
-import FormGroup from 'react-bootstrap/FormGroup'
-import FormControl from 'react-bootstrap/FormControl'
+//import NavDropdown from 'react-bootstrap/Nav';
+//import Form from 'react-bootstrap/Form'
+//import FormGroup from 'react-bootstrap/FormGroup'
+//import FormControl from 'react-bootstrap/FormControl'
 
 
 // Importing Components
@@ -28,7 +28,7 @@ class Navigation extends React.Component {
 
   render (){
     return(
-      <Fragement>
+      <Fragment>
         <Navbar collapseOnSelect staticTop expand="xl" variant="dark" className="main-nav">
           <Logotype className="ml-auto" />
           <Navbar.Toggle aria-controls="offcanvas-collapse" />
@@ -73,31 +73,58 @@ class Navigation extends React.Component {
             </Form>
           </Navbar.Collapse>
         </SlidingPane>
-      </Fragement>
+      </Fragment>
     )
   }
 }
 */
 
-//class Navigation extends React.Component {
-//
-//  render () {
-//    return(
-//      <Fragement>
-//        <Navbar fixed="top" bg="dark" variant="dark">
-//          <Navbar.Brand className="ml-auto">PGA</Navbar.Brand>
-//          <Navbar.Brand href="#">Burger Menu</Navbar.Brand>
-//        </Navbar>
-//      </Fragement>
-//    )
-//  }
-//}
-//
-//export default Navigation
+class TopNavigation extends React.Component {
 
-export default () => (
-  <Navbar fixed="top" bg="dark" variant="dark">
-    <Navbar.Brand className="ml-auto">PGA</Navbar.Brand>
-    <Navbar.Brand href="#">Burger Menu</Navbar.Brand>
-  </Navbar>
-);
+  constructor(props) {
+    super(props);
+    this.state = {
+      isPaneOpen: false
+    };
+  }
+
+  render() {
+
+    const something = 'what'
+    return(
+      <Fragment>
+<Navbar collapseOnSelect staticTop expand="xl" variant="dark" className="main-nav">
+          <Logotype className="ml-auto" />
+          <button class="bareButton" onClick={() => this.setState({ isPaneOpen: true })}>
+              <span class="navbar-toggler-icon"></span>
+          </button>
+        </Navbar>
+
+
+        <SlidingPane
+          className="some-custom-class"
+          width="30vw"
+          overlayClassName="some-custom-overlay-class"
+          isOpen={this.state.isPaneOpen}
+          title="Hey, it is optional pane title.  I can be React component too."
+          subtitle="Optional subtitle."
+          onRequestClose={() => {
+            // triggered on "<" on left top click or on outside click
+            this.setState({ isPaneOpen: false });
+          }}
+        >
+          <div>And I am pane content. BTW, what rocks?</div>
+          <Nav>
+            <NavItem active>Exhibit A</NavItem>
+            <Nav.Item href="#">Code</Nav.Item>
+            <Nav.Item href="#">Issues</Nav.Item>
+            <Nav.Item>Something else here</Nav.Item>
+            <Nav.Item divider />
+            <Nav.Item>Separated link</Nav.Item>
+          </Nav>
+        </SlidingPane>
+      </Fragment>
+    )
+  }
+}
+export default TopNavigation

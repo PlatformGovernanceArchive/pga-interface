@@ -211,9 +211,10 @@ $font-monospace: 'Droid Sans Mono', monospace;
 // ====================================
 
 // Prevent scrollbar from changing page width
-//html {
-//    width: 100vw;
-//}
+html {
+    width: 100vw;
+//    overflow: hidden;
+}
 
 body{
     font-family: $font-regular;
