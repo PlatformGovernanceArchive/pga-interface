@@ -93,9 +93,9 @@ class TopNavigation extends React.Component {
     const something = 'what'
     return(
       <Fragment>
-<Navbar collapseOnSelect staticTop expand="xl" variant="dark" className="main-nav">
-          <Logotype className="ml-auto" />
-          <button class="bareButton" onClick={() => this.setState({ isPaneOpen: true })}>
+        <Navbar collapseOnSelect staticTop expand="xl" variant="dark" className="main-nav">
+          <Logotype className="ml-auto"/>
+          <button class="functional" onClick={() => this.setState({ isPaneOpen: true })}>
               <span class="navbar-toggler-icon"></span>
           </button>
         </Navbar>
