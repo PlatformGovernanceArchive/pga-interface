@@ -12,85 +12,85 @@ export const DataContext = React.createContext();
 
 export class DataProvider extends React.Component {
 
-//  state = {
-//    status: 'initial'
-//  };
-
-  state = {
-    status: 'initial',
-    platforms: [
-      {
-        name: 'Facebook',
-        slug: 'facebook',
-        policies: [
-          { name: 'Terms of Service', slug: 'ts' },
-          { name: 'Community Guidelines', slug: 'cg' },
-          { name: 'Privacy Policy', slug: 'pp' },
-          { name: 'Copyright Policy', slug: 'cp' }
-        ]
-      },
-      {
-        name: 'YouTube',
-        slug: 'youtube',
-        policies: [
-          { name: 'Terms of Service', slug: 'ts' },
-          { name: 'Community Guidelines', slug: 'cg' },
-          { name: 'Privacy Policy', slug: 'pp' },
-          { name: 'Copyright Policy', slug: 'cp' }
-        ]
-      },
-      {
-        name: 'Twitter',
-        slug: 'twitter',
-        policies: [
-          { name: 'Terms of Service', slug: 'ts' },
-          { name: 'Community Guidelines', slug: 'cg' },
-          { name: 'Privacy Policy', slug: 'pp' },
-          { name: 'Copyright Policy', slug: 'cp' }
-        ]
-      },
-      {
-        name: 'Instagram',
-        slug: 'instagram',
-        policies: [
-          { name: 'Terms of Service', slug: 'ts' },
-          { name: 'Community Guidelines', slug: 'cg' },
-          { name: 'Privacy Policy', slug: 'pp' },
-          { name: 'Copyright Policy', slug: 'cp' }
-        ]
-      },
-      {
-        name: 'SoundCloud',
-        slug: 'soundcloud',
-        policies: [
-          { name: 'Terms of Service', slug: 'ts' },
-          { name: 'Community Guidelines', slug: 'cg' },
-          { name: 'Privacy Policy', slug: 'pp' },
-          { name: 'Copyright Policy', slug: 'cp' }
-        ]
-      },
-      {
-        name: 'Vimeo',
-        slug: 'vimeo',
-        policies: [
-          { name: 'Terms of Service', slug: 'ts' },
-          { name: 'Community Guidelines', slug: 'cg' },
-          { name: 'Privacy Policy', slug: 'pp' },
-          { name: 'Copyright Policy', slug: 'cp' }
-        ]
-      },
-      {
-        name: 'Pornhub',
-        slug: 'pornhub',
-        policies: [
-          { name: 'Terms of Service', slug: 'ts' },
-          { name: 'Community Guidelines', slug: 'cg' },
-          { name: 'Privacy Policy', slug: 'pp' },
-          { name: 'Copyright Policy', slug: 'cp' }
-        ]
-      }
-    ]
-  };
+    // state = {
+    //     status: 'initial',
+    //     platforms: []
+    // };
+    state = {
+      status: 'initial',
+      platforms: [
+        {
+          name: 'Facebook',
+          slug: 'facebook',
+          policies: [
+            { name: 'Terms of Service', slug: 'ts' },
+            { name: 'Community Guidelines', slug: 'cg' },
+            { name: 'Privacy Policy', slug: 'pp' },
+            { name: 'Copyright Policy', slug: 'cp' }
+          ]
+        },
+        {
+          name: 'YouTube',
+          slug: 'youtube',
+          policies: [
+            { name: 'Terms of Service', slug: 'ts' },
+            { name: 'Community Guidelines', slug: 'cg' },
+            { name: 'Privacy Policy', slug: 'pp' },
+            { name: 'Copyright Policy', slug: 'cp' }
+          ]
+        },
+        {
+          name: 'Twitter',
+          slug: 'twitter',
+          policies: [
+            { name: 'Terms of Service', slug: 'ts' },
+            { name: 'Community Guidelines', slug: 'cg' },
+            { name: 'Privacy Policy', slug: 'pp' },
+            { name: 'Copyright Policy', slug: 'cp' }
+          ]
+        },
+        {
+          name: 'Instagram',
+          slug: 'instagram',
+          policies: [
+            { name: 'Terms of Service', slug: 'ts' },
+            { name: 'Community Guidelines', slug: 'cg' },
+            { name: 'Privacy Policy', slug: 'pp' },
+            { name: 'Copyright Policy', slug: 'cp' }
+          ]
+        },
+        {
+          name: 'SoundCloud',
+          slug: 'soundcloud',
+          policies: [
+            { name: 'Terms of Service', slug: 'ts' },
+            { name: 'Community Guidelines', slug: 'cg' },
+            { name: 'Privacy Policy', slug: 'pp' },
+            { name: 'Copyright Policy', slug: 'cp' }
+          ]
+        },
+        {
+          name: 'Vimeo',
+          slug: 'vimeo',
+          policies: [
+            { name: 'Terms of Service', slug: 'ts' },
+            { name: 'Community Guidelines', slug: 'cg' },
+            { name: 'Privacy Policy', slug: 'pp' },
+            { name: 'Copyright Policy', slug: 'cp' }
+          ]
+        },
+        {
+          name: 'Pornhub',
+          slug: 'pornhub',
+          policies: [
+            { name: 'Terms of Service', slug: 'ts' },
+            { name: 'Community Guidelines', slug: 'cg' },
+            { name: 'Privacy Policy', slug: 'pp' },
+            { name: 'Copyright Policy', slug: 'cp' }
+          ]
+        }
+      ]
+    };
 
 //  loadBackupData = () => {
 //    const csvData = {
@@ -116,20 +116,31 @@ export class DataProvider extends React.Component {
 //  }
 
 
-  componentDidMount() {
-    this.setState({status: 'loadingData'})
-    //    this.loadAllData();
+    componentDidMount() {
+        this.setState({status: 'loadingData'})
+        fetch("http://localhost:5000/platforms", {
+            "method": "GET"
+        })
+            .then(response => response.json())
+            .then(response => {
+                this.setState({
+                    platforms: response
+                })
+            })
+            .catch(err => {
+                console.log(err);
+            });
 
-    console.log('status in dataContext: ', this.state.status )
-  }
+        console.log('status in dataContext: ', this.state.status)
+    }
 
-  render() {
-    return (
-      <DataContext.Provider
-        value={{ ...this.state }}
-      >
-        {this.props.children}
-      </DataContext.Provider>
-    );
-  }
+    render() {
+        return (
+            <DataContext.Provider
+                value={{...this.state}}
+            >
+                {this.props.children}
+            </DataContext.Provider>
+        );
+    }
 }
