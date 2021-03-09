@@ -7,6 +7,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+// Importing Components
+import {PolicyOverview_Tagline} from '../../constants';
+
 class PolicyOverview extends React.Component{
 
   render () {
@@ -16,7 +19,7 @@ class PolicyOverview extends React.Component{
 
     const platformOutput = platforms.map((p,i) => {
       return(
-        <Fragment>
+        <div className="platform">
           <p key={i}>{p.name}</p>
           <ul>
             {
@@ -29,18 +32,19 @@ class PolicyOverview extends React.Component{
               })
             }
           </ul>
-        </Fragment>
+        </div>
       )
     })
 
     return(
 
-      <Container className="h-100">
-        <Row class="row align-items-center h-100">
-          <Col className="mx-auto">
-            <h1>Pick a platform</h1>
-            <br/>
-            {platformOutput}
+      <Container>
+        <Row>
+          <Col>
+            <h1>{PolicyOverview_Tagline}</h1>
+            <div className="platforms">
+              {platformOutput}
+            </div>
           </Col>
         </Row>
       </Container>

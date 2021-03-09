@@ -6,8 +6,9 @@ import Navigation from "./navigation";
 /* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 export default props => (
   <DataContext.Consumer>
-    {() => (
+    {({ platforms }) => (
       <Navigation
+        platforms={platforms}
         {...props}
       />
     )}

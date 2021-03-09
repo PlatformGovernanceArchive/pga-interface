@@ -34,14 +34,16 @@ const Home = () => (
   </div>
 )
 
-const PickPolicy = ({ match }) => (
-  <div className="App pick">
-    <Navigation />
-    <PolicyOverview />
-  </div>
-)
+const PickPolicy = ({ match }) => {
+  return(
+    <div className="App pick">
+      <Navigation />
+      <PolicyOverview />
+    </div>
+  )
+}
 
-const DocumentView = ({match}) => {
+const DocumentView = ({ match }) => {
   let today = new Date().toISOString().slice(0, 10)
   let setDate = today
 
@@ -51,7 +53,9 @@ const DocumentView = ({match}) => {
 
   return(
     <div className="App">
-      <Navigation />
+      <Navigation
+        platform={match.params.platformSlug}
+      />
       <Document
         platform={match.params.platformSlug}
         type={match.params.typeSlug}

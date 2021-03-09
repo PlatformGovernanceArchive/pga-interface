@@ -1,30 +1,27 @@
 import React from 'react';
 import ReactTypingEffect from 'react-typing-effect';
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 // Importing bootstrap
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 //import Button from 'react-bootstrap/Button';
 
 // Importing Components
 import Logotype from './logotype'
-
-
+import * as Strings from '../constants';
 
 /* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 export default () => (
   <Jumbotron fluid>
     <Container>
         <blockquote>
-          “The way platforms order and govern user activities has tremendous effects on how communication, politics, mobility and other key sectors are organised in the digital society.”
+          {Strings.Hero_Quote}
         </blockquote>
-        <Logotype />
+        <Logotype tag="h1" />
         <p className="subtitle">
           <ReactTypingEffect
-            staticText="An archive of all policy documents by"
+            staticText={Strings.Hero_Typing}
             speed="100"
             eraseSpeed="50"
             eraseDelay="2000"
@@ -56,7 +53,7 @@ export default () => (
          smooth={true}
          offset={-20}
          to="about">
-          <button>Learn more</button>
+          <button>{Strings.Hero_LearnMore}</button>
         </Link>
     </Container>
   </Jumbotron>

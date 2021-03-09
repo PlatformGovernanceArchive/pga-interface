@@ -5,40 +5,26 @@ export const ExploreOtherScenarios = 'Explore other scenarios';
 export const ProceedToOtherPhase = 'Proceed to another phase';
 
 // Home
-export const Title = 'The Platform Governance Archive 1.0';
-export const Slogan_1stPar = 'Digital technologies play a growing role in efforts to facilitate a peaceful settlement of armed conflict. Conflict parties and conflict stakeholders increasingly use digital technologies, and especially social media, to further their agendas and interests. Approaches to peace mediation need to respond to this trend. This online resource provides learning material for mediators and mediation support actors that wish to harness the opportunities of digital technologies for enhancing inclusion in peace processes.';
-export const Slogan_2ndPar = 'Digital inclusion can serve various strategic purposes. The four illustrative scenarios below present a range of use cases for digital inclusion, across different phases of the peace process. Each use case displays tags that specify the strategic purpose, and the functions and outputs of technology that help to achieve this specific purpose. The uses cases also highlight the most important risks and possible unintended consequences.';
-export const Disclaimer = 'This online resource is based on a one-year research project funded by the <a target="_blank" href="https://www.usip.org/">United States Institute of Peace (USIP)</a>. The project was implemented by Andreas Hirblinger (Graduate Institute of International and Development Studies, Geneva). The use cases were produced through a participatory online course, held in collaboration with <a target="_blank" href="http://www.howtobuildup.org/">Build Up</a>. The project team would like to thank all course participants who contributed their valuable experience and insights.';
-export const MoreInfo = 'For more details about this project and comprehensive research report, please visit the about page.';
+// Hero
+export const Hero_Quote = '“The way platforms order and govern user activities has tremendous effects on how communication, politics, mobility and other key sectors are organised in the digital society.”';
+export const Hero_Typing = 'An archive of all policy documents by';
+export const Hero_LearnMore = 'Learn more';
+// Intro
+export const Intro_About_Headline = 'About this project';
+export const Intro_About_Text = 'The Platform Governance Archive (PGA) is a structured and open database with content policies of key platforms over their full life-time. While public debates over the handling of misinformation and hate speech by major platforms have long reached mainstream audiences and policy-makers, there is little accessible material to rigidly study short- and long-term developments of companies’ internal policies. The [Alexander von Humboldt Institute for Internet and Society](https://www.hiig.de/en) has built up and curated a vast collection of thousands of these documents, ranging from Terms of Service (ToS)  to community guidelines  On this basis, the PGA enables researchers and journalists alike to address key questions of platform governance: How do misinformation or hate speech policies compare across platforms and over time? What are the factors that drive platforms to change policies? The PGA is the first online resource of its kind. Its goal is to enhance public knowledge of platform governance by enabling research collaborations and journalistic reporting, and by already providing exemplary analyses of the material.';
+export const Intro_DataPaper_Headline = 'Data Paper 1.0';
+export const Intro_DataPaper_Text = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.';
+export const Intro_DataPaper_Button = 'Read the paper';
+export const Intro_Contribute_Headline = 'How to contribute and cite';
+export const Intro_Contribute_Text = `If you have found the Platform Governance Archive useful in your research, or if you want to reference it in your work, please consider to cite the paper we presented above. You can read the article in Green Open Access at the following link:
 
-// Senario view
-export const ExploreScenario = 'Explore this scenario';
-export const ExplorePhase = 'Explore use cases';
+[Katzenbach, C., Magalhães, J. C., Koppe, A., & Sühr, T. (2021) Lorem ipsum dolor sit amet, consetetur sadipscing elitr. *Sed diam nonumy eirmod tempor.* https://doi.org/10.1177/1464884917734055](http://www.hiig.de)`;
+export const Intro_Explore = 'Explore the archive';
 
-// Phase view
-export const PhaseDescription = 'Phase description';
-export const ConventionalFormats = 'Conventional inclusion formats';
-export const ExploreUseCases_bfrNo = 'Explore the following';
-export const ExploreUseCases_aftrNo = 'use case(s) of digital technology:';
-export const ContextualVariations = 'Important context factors';
-export const Risks = 'Risks and possible unintended consequences';
-export const StrategicPurpose = 'Strategic purpose of digital inclusion';
-export const Functions = 'Functions of digital Technology';
-export const Outputs = 'Outputs of digital Technology';
-export const TechnologiesUsed = 'Technologies used';
+// Policy overview
+export const PolicyOverview_Tagline = 'Select platform and type of policy to explore their development over time.';
 
-// Term drawer
-export const DrawerTitle = 'Terms and definitions.';
-export const DrawerSubtitle = 'Functions, outputs and strategic purposes and their definition within this context.';
 
-// Framework
-export const TermsExplanation = 'View our <a href="framework">conceptual framework</a> to explore which functions and outputs serve which specific purpose.';
-export const ExploreFramework = 'Explore the framework';
-export const FrameworkExplanation = 'This conceptual framework is based on a review of technology uses in adjacent professional fields and  on the illustrative use cases developed in the course of the project.<br /><br />Click on the strategic purposes to see the functions and outputs of technology that help to achieve a respective strategic purpose. To see explanations for each term, click on the respective item.';
-export const FrameworkHeader_F = 'Functions';
-export const FrameworkHeader_O = 'Outputs';
-export const FrameworkHeader_P = 'Strategic Purpose';
-export const FrameworkArrow = '→';
 
 
 // Page titles
