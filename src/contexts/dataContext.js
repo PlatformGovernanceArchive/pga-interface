@@ -13,91 +13,96 @@ export const DataContext = React.createContext();
 
 export class DataProvider extends React.Component {
 
-    // state = {
-    //     status: 'initial',
-    //     platforms: []
-    // };
-    state = {
-      status: 'initial',
-      platforms: ''
-    };
+  // state = {
+  //     status: 'initial',
+  //     platforms: []
+  // };
+  state = {
+    status: 'initial',
+//    setValue: this.setValue,
+    platforms: []
+  };
 
-    fillWithDummyData = () => {
-      this.setState({
-        platforms: [
-          {
-            name: 'Facebook',
-            slug: 'facebook',
-            policies: [
-              { name: 'Terms of Service', slug: 'ts' },
-              { name: 'Community Guidelines', slug: 'cg' },
-              { name: 'Privacy Policy', slug: 'pp' },
-              { name: 'Copyright Policy', slug: 'cp' }
-            ]
-          },
-          {
-            name: 'YouTube',
-            slug: 'youtube',
-            policies: [
-              { name: 'Terms of Service', slug: 'ts' },
-              { name: 'Community Guidelines', slug: 'cg' },
-              { name: 'Privacy Policy', slug: 'pp' },
-              { name: 'Copyright Policy', slug: 'cp' }
-            ]
-          },
-          {
-            name: 'Twitter',
-            slug: 'twitter',
-            policies: [
-              { name: 'Terms of Service', slug: 'ts' },
-              { name: 'Community Guidelines', slug: 'cg' },
-              { name: 'Privacy Policy', slug: 'pp' },
-              { name: 'Copyright Policy', slug: 'cp' }
-            ]
-          },
-          {
-            name: 'Instagram',
-            slug: 'instagram',
-            policies: [
-              { name: 'Terms of Service', slug: 'ts' },
-              { name: 'Community Guidelines', slug: 'cg' },
-              { name: 'Privacy Policy', slug: 'pp' },
-              { name: 'Copyright Policy', slug: 'cp' }
-            ]
-          },
-          {
-            name: 'SoundCloud',
-            slug: 'soundcloud',
-            policies: [
-              { name: 'Terms of Service', slug: 'ts' },
-              { name: 'Community Guidelines', slug: 'cg' },
-              { name: 'Privacy Policy', slug: 'pp' },
-              { name: 'Copyright Policy', slug: 'cp' }
-            ]
-          },
-          {
-            name: 'Vimeo',
-            slug: 'vimeo',
-            policies: [
-              { name: 'Terms of Service', slug: 'ts' },
-              { name: 'Community Guidelines', slug: 'cg' },
-              { name: 'Privacy Policy', slug: 'pp' },
-              { name: 'Copyright Policy', slug: 'cp' }
-            ]
-          },
-          {
-            name: 'Pornhub',
-            slug: 'pornhub',
-            policies: [
-              { name: 'Terms of Service', slug: 'ts' },
-              { name: 'Community Guidelines', slug: 'cg' },
-              { name: 'Privacy Policy', slug: 'pp' },
-              { name: 'Copyright Policy', slug: 'cp' }
-            ]
-          }
-        ]
-      })
-    }
+//  setValue = (platforms) => {
+//    this.setState({ platforms });
+//  }
+
+  fillWithDummyData = () => {
+    this.setState({
+      platforms: [
+        {
+          name: 'Facebook',
+          slug: 'facebook',
+          policies: [
+            { name: 'Terms of Service', slug: 'ts' },
+            { name: 'Community Guidelines', slug: 'cg' },
+            { name: 'Privacy Policy', slug: 'pp' },
+            { name: 'Copyright Policy', slug: 'cp' }
+          ]
+        },
+        {
+          name: 'YouTube',
+          slug: 'youtube',
+          policies: [
+            { name: 'Terms of Service', slug: 'ts' },
+            { name: 'Community Guidelines', slug: 'cg' },
+            { name: 'Privacy Policy', slug: 'pp' },
+            { name: 'Copyright Policy', slug: 'cp' }
+          ]
+        },
+        {
+          name: 'Twitter',
+          slug: 'twitter',
+          policies: [
+            { name: 'Terms of Service', slug: 'ts' },
+            { name: 'Community Guidelines', slug: 'cg' },
+            { name: 'Privacy Policy', slug: 'pp' },
+            { name: 'Copyright Policy', slug: 'cp' }
+          ]
+        },
+        {
+          name: 'Instagram',
+          slug: 'instagram',
+          policies: [
+            { name: 'Terms of Service', slug: 'ts' },
+            { name: 'Community Guidelines', slug: 'cg' },
+            { name: 'Privacy Policy', slug: 'pp' },
+            { name: 'Copyright Policy', slug: 'cp' }
+          ]
+        },
+        {
+          name: 'SoundCloud',
+          slug: 'soundcloud',
+          policies: [
+            { name: 'Terms of Service', slug: 'ts' },
+            { name: 'Community Guidelines', slug: 'cg' },
+            { name: 'Privacy Policy', slug: 'pp' },
+            { name: 'Copyright Policy', slug: 'cp' }
+          ]
+        },
+        {
+          name: 'Vimeo',
+          slug: 'vimeo',
+          policies: [
+            { name: 'Terms of Service', slug: 'ts' },
+            { name: 'Community Guidelines', slug: 'cg' },
+            { name: 'Privacy Policy', slug: 'pp' },
+            { name: 'Copyright Policy', slug: 'cp' }
+          ]
+        },
+        {
+          name: 'Pornhub',
+          slug: 'pornhub',
+          policies: [
+            { name: 'Terms of Service', slug: 'ts' },
+            { name: 'Community Guidelines', slug: 'cg' },
+            { name: 'Privacy Policy', slug: 'pp' },
+            { name: 'Copyright Policy', slug: 'cp' }
+          ]
+        }
+      ]
+    })
+  }
 
 //  loadBackupData = () => {
 //    const csvData = {
@@ -122,32 +127,65 @@ export class DataProvider extends React.Component {
 //    });
 //  }
 
+  getDataFromServer = () => {
+    this.setState({status: 'loadingData'})
+    fetch(PLATFORMS_URL, {
+      "method": "GET"
+    })
+      .then(response => response.json())
+      .then(response => {
+          this.setState({
+              platforms: response,
+              status: 'data loaded from server'
+          })
+      })
+      .catch(err => {
+          console.log(err);
+      });
 
-    componentDidMount() {
-        this.setState({status: 'loadingData'})
-        fetch(PLATFORMS_URL, {
-            "method": "GET"
-        })
-            .then(response => response.json())
-            .then(response => {
-                this.setState({
-                    platforms: response
-                })
-            })
-            .catch(err => {
-                console.log(err);
-            });
+    console.log('status in dataContext: ', this.state.status)
+  }
 
-        console.log('status in dataContext: ', this.state.status)
-    }
+//  getDataFromServerAndStore = () => {
+//    this.setState({status: 'loadingData'})
+//    fetch(PLATFORMS_URL, {
+//      "method": "GET"
+//    })
+//      .then(response => response.json())
+//      .then(response => {
+//          this.setState({
+//              platforms: response
+//          })
+//      })
+//      .then(response => {
+//
+//      })
+//      .catch(err => {
+//          console.log(err);
+//      });
+//
+//    console.log('status in dataContext: ', this.state.status)
+//  }
 
-    render() {
-        return (
-            <DataContext.Provider
-                value={{...this.state}}
-            >
-                {this.props.children}
-            </DataContext.Provider>
-        );
-    }
+  componentDidMount() {
+    this.getDataFromServer();
+//    this.fillWithDummyData();
+    localStorage.setItem('platforms', 'test')
+  }
+
+//  componentDidUpdate(prevProps, prevState) {
+//    if (this.state.platforms !== prevState.platforms) {
+//      localStorage.setItem('platforms', this.state.value)
+//    }
+//  }
+
+  render() {
+    return (
+      <DataContext.Provider
+        value={{...this.state}}
+      >
+        {this.props.children}
+      </DataContext.Provider>
+    );
+  }
 }

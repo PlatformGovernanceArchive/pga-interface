@@ -25,20 +25,34 @@ class Timeline extends React.Component {
 
     const platforms = this.props.platforms
 
-    const selectedPlatform = platforms.filter(p => p.slug === this.props.platform).pop()
+    console.log('check: ', platforms.length)
 
-    const selectedType = selectedPlatform.policies.filter(t => t.slug === this.props.type).pop()
+    if (platforms.length>0){
+      const selectedPlatform = platforms.filter(p => p.slug === this.props.platform).pop()
 
-    const date = this.props.date
+      const selectedType = selectedPlatform.policies.filter(t => t.slug === this.props.type).pop()
 
-    return(
-      <Row>
-        <Col className="pageTitle">
-          <h1>Timeline</h1>
-          <p>I should show the timeline of <strong>{selectedPlatform.name}</strong> with the policy <strong>{selectedType.name}</strong> and the date <strong>{date}</strong> selected</p>
-        </Col>
-      </Row>
-    )
+      const date = this.props.date
+
+      return (
+        <Row>
+          <Col className="pageTitle">
+            <h1>Timeline</h1>
+            <p>I should show the timeline of <strong>{selectedPlatform.name}</strong> with the policy <strong>{selectedType.name}</strong> and the date <strong>{date}</strong> selected</p>
+          </Col>
+        </Row>
+      )
+    }
+    else{
+      return(
+        <Row>
+          <Col className="pageTitle">
+            <h1>Timeline</h1>
+            <p>Loading data</p>
+          </Col>
+        </Row>
+      )
+    }
   }
 }
 export default Timeline

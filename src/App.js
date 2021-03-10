@@ -46,13 +46,14 @@ const PickPolicy = ({ match }) => {
 const setDate = (platform, type, date, context) => {
 
 //  console.log('Context:', context);
+  const { platforms: platformData } = context
 
   if (date){
     return date
   }
-  else{
+  else if(platformData.length>0){
+
     //Get selected platform from context
-    const { platforms: platformData } = context
     const selectedPlatform = platformData.filter(pl => pl.slug === platform);
 
     //Get selected policy from context
@@ -67,6 +68,9 @@ const setDate = (platform, type, date, context) => {
   //  console.log('Dates:', recentDate);
 
     return recentDate
+  }
+  else{
+    return '20200101'
   }
 
 }
