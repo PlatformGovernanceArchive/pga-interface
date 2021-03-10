@@ -51,20 +51,19 @@ const setDate = (platform, type, date, context) => {
     return date
   }
   else{
-    //Get only platforms from context
-    const { platforms: platformData, ...newData } = context
-
     //Get selected platform from context
+    const { platforms: platformData } = context
     const selectedPlatform = platformData.filter(pl => pl.slug === platform);
 
     //Get selected policy from context
-    const { policies: policiesData, ...newerData } = selectedPlatform[0]
+    const { policies: policiesData } = selectedPlatform[0]
     const selectedPolicy = policiesData.filter(po => po.slug === type);
 
     //Get dates from policy
-    const { dates: datesData, ...newererData } = selectedPolicy[0]
-    //Get most recent date
+    const { dates: datesData } = selectedPolicy[0]
+    //Get most recent date (-1) in the format YYYYMMDD (0,8)
     let recentDate=datesData.slice(-1)[0].slice(0,8)
+
   //  console.log('Dates:', recentDate);
 
     return recentDate

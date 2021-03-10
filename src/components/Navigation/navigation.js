@@ -90,7 +90,6 @@ class TopNavigation extends React.Component {
 
   render() {
 
-    const something = 'what'
     return(
       <Fragment>
         <Navbar collapseOnSelect staticTop expand="xl" variant="dark" className="main-nav">
