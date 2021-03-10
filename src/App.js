@@ -22,7 +22,7 @@ import Timeline from './components/Timeline';
 import PolicyOverview from './components/PolicyOverview';
 import ScrollToTop from './components/scrollToTop';
 import * as Strings from './constants';
-//import { DataContext } from './contexts/dataContext'
+import { DataContext } from './contexts/dataContext'
 
 // Importing background images
 import backgroundHome from "./assets/img/background-home.png";
@@ -43,13 +43,44 @@ const PickPolicy = ({ match }) => {
   )
 }
 
-const DocumentView = ({ match }) => {
-  let today = new Date().toISOString().slice(0, 10)
-  let setDate = today
+const setDate = (platform, type, date, context) => {
 
-  if (match.params.dateStamp){
-     setDate = match.params.dateStamp
+//  console.log('Context:', context);
+
+  if (date){
+    return date
   }
+  else{
+    //Get only platforms from context
+    const { platforms: platformData, ...newData } = context
+
+    //Get selected platform from context
+    const selectedPlatform = platformData.filter(pl => pl.slug === platform);
+
+    //Get selected policy from context
+    const { policies: policiesData, ...newerData } = selectedPlatform[0]
+    const selectedPolicy = policiesData.filter(po => po.slug === type);
+
+    //Get dates from policy
+    const { dates: datesData, ...newererData } = selectedPolicy[0]
+    //Get most recent date
+    let recentDate=datesData.slice(-1)[0].slice(0,8)
+  //  console.log('Dates:', recentDate);
+
+    return recentDate
+  }
+
+}
+
+const DocumentView = ({ match }) => {
+
+  const contextValue = React.useContext(DataContext);
+  const dateSelected = setDate(
+    match.params.platformSlug,
+    match.params.typeSlug,
+    match.params.dateStamp,
+    contextValue)
+
 
   return(
     <div className="App">
@@ -59,12 +90,12 @@ const DocumentView = ({ match }) => {
       <Document
         platform={match.params.platformSlug}
         type={match.params.typeSlug}
-        date={setDate}
+        date={dateSelected}
       />
       <Timeline
           platform={match.params.platformSlug}
           type={match.params.typeSlug}
-          date={setDate}
+          date={dateSelected}
       />
     </div>
   )

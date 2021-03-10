@@ -19,79 +19,85 @@ export class DataProvider extends React.Component {
     // };
     state = {
       status: 'initial',
-      platforms: [
-        {
-          name: 'Facebook',
-          slug: 'facebook',
-          policies: [
-            { name: 'Terms of Service', slug: 'ts' },
-            { name: 'Community Guidelines', slug: 'cg' },
-            { name: 'Privacy Policy', slug: 'pp' },
-            { name: 'Copyright Policy', slug: 'cp' }
-          ]
-        },
-        {
-          name: 'YouTube',
-          slug: 'youtube',
-          policies: [
-            { name: 'Terms of Service', slug: 'ts' },
-            { name: 'Community Guidelines', slug: 'cg' },
-            { name: 'Privacy Policy', slug: 'pp' },
-            { name: 'Copyright Policy', slug: 'cp' }
-          ]
-        },
-        {
-          name: 'Twitter',
-          slug: 'twitter',
-          policies: [
-            { name: 'Terms of Service', slug: 'ts' },
-            { name: 'Community Guidelines', slug: 'cg' },
-            { name: 'Privacy Policy', slug: 'pp' },
-            { name: 'Copyright Policy', slug: 'cp' }
-          ]
-        },
-        {
-          name: 'Instagram',
-          slug: 'instagram',
-          policies: [
-            { name: 'Terms of Service', slug: 'ts' },
-            { name: 'Community Guidelines', slug: 'cg' },
-            { name: 'Privacy Policy', slug: 'pp' },
-            { name: 'Copyright Policy', slug: 'cp' }
-          ]
-        },
-        {
-          name: 'SoundCloud',
-          slug: 'soundcloud',
-          policies: [
-            { name: 'Terms of Service', slug: 'ts' },
-            { name: 'Community Guidelines', slug: 'cg' },
-            { name: 'Privacy Policy', slug: 'pp' },
-            { name: 'Copyright Policy', slug: 'cp' }
-          ]
-        },
-        {
-          name: 'Vimeo',
-          slug: 'vimeo',
-          policies: [
-            { name: 'Terms of Service', slug: 'ts' },
-            { name: 'Community Guidelines', slug: 'cg' },
-            { name: 'Privacy Policy', slug: 'pp' },
-            { name: 'Copyright Policy', slug: 'cp' }
-          ]
-        },
-        {
-          name: 'Pornhub',
-          slug: 'pornhub',
-          policies: [
-            { name: 'Terms of Service', slug: 'ts' },
-            { name: 'Community Guidelines', slug: 'cg' },
-            { name: 'Privacy Policy', slug: 'pp' },
-            { name: 'Copyright Policy', slug: 'cp' }
-          ]
-        }
-      ]
+      platforms: ''
     };
+
+    fillWithDummyData = () => {
+      this.setState({
+        platforms: [
+          {
+            name: 'Facebook',
+            slug: 'facebook',
+            policies: [
+              { name: 'Terms of Service', slug: 'ts' },
+              { name: 'Community Guidelines', slug: 'cg' },
+              { name: 'Privacy Policy', slug: 'pp' },
+              { name: 'Copyright Policy', slug: 'cp' }
+            ]
+          },
+          {
+            name: 'YouTube',
+            slug: 'youtube',
+            policies: [
+              { name: 'Terms of Service', slug: 'ts' },
+              { name: 'Community Guidelines', slug: 'cg' },
+              { name: 'Privacy Policy', slug: 'pp' },
+              { name: 'Copyright Policy', slug: 'cp' }
+            ]
+          },
+          {
+            name: 'Twitter',
+            slug: 'twitter',
+            policies: [
+              { name: 'Terms of Service', slug: 'ts' },
+              { name: 'Community Guidelines', slug: 'cg' },
+              { name: 'Privacy Policy', slug: 'pp' },
+              { name: 'Copyright Policy', slug: 'cp' }
+            ]
+          },
+          {
+            name: 'Instagram',
+            slug: 'instagram',
+            policies: [
+              { name: 'Terms of Service', slug: 'ts' },
+              { name: 'Community Guidelines', slug: 'cg' },
+              { name: 'Privacy Policy', slug: 'pp' },
+              { name: 'Copyright Policy', slug: 'cp' }
+            ]
+          },
+          {
+            name: 'SoundCloud',
+            slug: 'soundcloud',
+            policies: [
+              { name: 'Terms of Service', slug: 'ts' },
+              { name: 'Community Guidelines', slug: 'cg' },
+              { name: 'Privacy Policy', slug: 'pp' },
+              { name: 'Copyright Policy', slug: 'cp' }
+            ]
+          },
+          {
+            name: 'Vimeo',
+            slug: 'vimeo',
+            policies: [
+              { name: 'Terms of Service', slug: 'ts' },
+              { name: 'Community Guidelines', slug: 'cg' },
+              { name: 'Privacy Policy', slug: 'pp' },
+              { name: 'Copyright Policy', slug: 'cp' }
+            ]
+          },
+          {
+            name: 'Pornhub',
+            slug: 'pornhub',
+            policies: [
+              { name: 'Terms of Service', slug: 'ts' },
+              { name: 'Community Guidelines', slug: 'cg' },
+              { name: 'Privacy Policy', slug: 'pp' },
+              { name: 'Copyright Policy', slug: 'cp' }
+            ]
+          }
+        ]
+      })
+    }
 
 //  loadBackupData = () => {
 //    const csvData = {
