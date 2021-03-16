@@ -17,6 +17,7 @@ class Timeline extends React.Component {
     }
   }
 
+  // Get data from props and update selection states
   updateSelection = () => {
     const selectedP = this.props.platforms.filter(p => p.slug === this.props.platform).pop()
 
@@ -29,14 +30,9 @@ class Timeline extends React.Component {
       selectedPolicy: selectedT,
       selectedDate: this.props.date
     });
-
-//    return ({
-//        p: selectedP,
-//        t: selectedT,
-//        s: selectedD
-//      })
   }
 
+  // Parses date from YYYYMMDDMMSS to YYYY-MM-DD
   transformDate = (d) => {
     let datelong=d.toString()
     let year = datelong.substr(0,4)
@@ -46,6 +42,14 @@ class Timeline extends React.Component {
     return date.join('-')
   }
 
+  getSelectedTime(k,i){
+    const key = 'value-' + k
+    const stateObj = {key: i}
+    console.log('State ob',stateObj)
+    return this.state.stateObj
+  }
+
+  // Build Code for Timeline
   buildPolicies = () => {
     const policies=this.state.selectedPlatform.policies
     return (
@@ -56,17 +60,26 @@ class Timeline extends React.Component {
               <Col>
                 {policy.name}
               </Col>
-              <Col sm="8">
+              <Col sm="10" id="timeline">
                 {
-                  console.log('dates:', policy.dates, policy.dates.map(d => (this.transformDate(d))) )
+                  console.log(
+                    'dates:',
+                    policy.dates,
+                    policy.dates.map(d => (this.transformDate(d)))
+                  )
                 }
                 <HorizontalTimeline
-                    index={this.state.value}
-                    indexClick={(index) => {
-                      this.setState({ value: index, previous: this.state.value });
-                    }}
-                    values={policy.dates.map(d => (this.transformDate(d)))}
-                  />
+                  index={this.state.value}
+                  indexClick={(index) => {
+                    this.setState({ value: index, previous: this.state.value });
+                  }}
+                  values={policy.dates.map(d => (this.transformDate(d)))}
+                  styles={{
+                    background: '#08131e',
+                    foreground: '#7b9d6f',
+                    outline: '#dfdfdf'
+                  }}
+                />
               </Col>
             </Row>
           ))}
@@ -76,23 +89,23 @@ class Timeline extends React.Component {
 
   }
 
-  getDates = () => {
-    const policies=this.state.selectedPlatform.policies
-    let dateArrays=policies.map((p)=>p.dates)
-    let dates=[].concat.apply([],dateArrays)
-//    console.log('all dates: ', dateArrays, dates)
-    return dates
-  }
-
+//// Build dates Array of all policies
+//  getDates = () => {
+//    const policies=this.state.selectedPlatform.policies
+//    let dateArrays=policies.map((p)=>p.dates)
+//    let dates=[].concat.apply([],dateArrays)
+////    console.log('all dates: ', dateArrays, dates)
+//    return dates
+//  }
 //  getMinDate = () => {
 //    return  Math.min(...this.getDates())
 //  }
-//
 //  getMaxDate = () => {
 //    return Math.max(...this.getDates());
 //  }
 
 
+// Trigger updateSelection() upon props change
   componentDidUpdate(prevProps) {
     // Typical usage (don't forget to compare props):
     if (this.props.platforms !== prevProps.platforms) {
@@ -103,6 +116,7 @@ class Timeline extends React.Component {
 
   render(){
 
+    // Render timeline when API returned data
     if (this.state.selectedPlatform.policies){
 
       const policiesCode = this.buildPolicies();
@@ -115,6 +129,7 @@ class Timeline extends React.Component {
         </Row>
       )
     }
+    // Render placeholder when no data from API
     else{
       return(
         <Row>

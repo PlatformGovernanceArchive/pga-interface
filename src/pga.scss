@@ -494,6 +494,16 @@ ul{
     }
 }
 
+#timeline{
+    object {
+        position: unset !important;
+    }
+
+    li::before {
+        content: none;
+    }
+}
+
 // Pages
 .pageContent{
     $padding-left: 15px + 20px + 40px; //.col ul li
