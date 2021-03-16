@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 // Importing dependencies
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -9,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './pga.scss';
 
 // Importing bootstrap
-//import Container from 'react-bootstrap/Container';
+import Container from 'react-bootstrap/Container';
 //import Row from 'react-bootstrap/Row';
 //import Col from 'react-bootstrap/Col';
 
@@ -84,22 +85,26 @@ const DocumentView = ({ match }) => {
     match.params.dateStamp,
     contextValue)
 
+  const history = useHistory()
 
   return(
     <div className="App">
       <Navigation
         platform={match.params.platformSlug}
       />
-      <Document
-        platform={match.params.platformSlug}
-        type={match.params.typeSlug}
-        date={dateSelected}
-      />
-      <Timeline
+      <Container fluid className="documentViewer">
+        <Document
           platform={match.params.platformSlug}
           type={match.params.typeSlug}
           date={dateSelected}
-      />
+        />
+        <Timeline
+          platform={match.params.platformSlug}
+          type={match.params.typeSlug}
+          date={dateSelected}
+          history={history}
+        />
+      </Container>
     </div>
   )
 }

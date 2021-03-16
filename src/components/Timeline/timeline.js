@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import { useHistory } from 'react-router-dom';
 import HorizontalTimeline from 'react-horizontal-timeline';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -12,7 +13,10 @@ class Timeline extends React.Component {
       selectedPlatform: '',
       selectedPolicy: '',
       selectedDate: '',
-      value: 0,
+      value_0: 1,
+      value_1: 2,
+      value_2: 3,
+      value_3: 4,
       previous: 0
     }
   }
@@ -53,14 +57,14 @@ class Timeline extends React.Component {
   buildPolicyTimelines = () => {
     const policies=this.state.selectedPlatform.policies
     return (
-      <Col>
+      <Fragment>
         <ul className="policies">
           {policies.map((policy,key)=> (
-            <Row key={key}>
+            <Row key={key} className="policy">
               <Col>
-                {policy.name}
+                <h3>{policy.name}</h3>
               </Col>
-              <Col sm="10" id="timeline">
+              <Col sm="10" className="horizontalTimeline">
                 {
 //                  console.log(
 //                    'dates:',
@@ -69,14 +73,15 @@ class Timeline extends React.Component {
 //                  )
                 }
                 <HorizontalTimeline
-                  index={this.state.value}
+                  index={this.state[`value_${key}`]}
                   indexClick={(index) => {
-                    this.setState({ value: index, previous: this.state.value });
+                    this.setState({ [`value_${key}`]: index, previous: this.state[`value_${key}`] });
+                    this.actionOnDateClick(policy.slug, index);
                   }}
                   values={policy.dates.map(d => (this.transformDate(d)))}
                   styles={{
                     background: '#08131e',
-                    foreground: '#7b9d6f',
+                    foreground: '#206D86',
                     outline: '#dfdfdf'
                   }}
                 />
@@ -84,9 +89,21 @@ class Timeline extends React.Component {
             </Row>
           ))}
         </ul>
-      </Col>
+      </Fragment>
     )
+  }
 
+  translateIndexToDate = (pp, ii) => {
+    return this.state.selectedPlatform.policies.filter(p => p.slug === pp).pop().dates[ii]
+  }
+
+  // OnClick action when date in timeline selected
+  actionOnDateClick = (s, i) => {
+//    console.log('action:', s, i, this.props.history)
+    const path = `/view/${this.state.selectedPlatform.slug}/${s}/${this.translateIndexToDate(s,i)}`
+
+    console.log('path:', path)
+    this.props.history.push(path)
   }
 
 //// Build dates Array of all policies
@@ -106,7 +123,7 @@ class Timeline extends React.Component {
 
 
   // Trigger updateSelection() upon props change
-  componentDidUpdate(prevProps) {
+  componentDidUpdate = (prevProps) => {
     // Typical usage (don't forget to compare props):
     if (this.props.platforms !== prevProps.platforms) {
       this.updateSelection();
@@ -114,7 +131,7 @@ class Timeline extends React.Component {
   }
 
   // Trigger updateSelection() upon load
-  componentDidMount() {
+  componentDidMount = () => {
     if (this.props.platforms.length > 0) {
       this.updateSelection();
     }
@@ -129,7 +146,7 @@ class Timeline extends React.Component {
       const policiesCode = this.buildPolicyTimelines();
 
       return (
-        <Row>
+        <Row className="loaded timelines">
           <Col>
             {policiesCode}
           </Col>
@@ -139,8 +156,8 @@ class Timeline extends React.Component {
     // Render placeholder when no data from API
     else{
       return(
-        <Row>
-          <Col className="pageTitle">
+        <Row className="loading timelines">
+          <Col>
             <h1>Timeline</h1>
             <p>Loading data</p>
           </Col>
