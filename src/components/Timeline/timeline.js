@@ -87,9 +87,6 @@ class Timeline extends React.Component {
                     foreground: '#206D86',
                     outline: '#dfdfdf'
                   }}
-                  getLabel = {(date) => {
-//                    console.log(date, Moment(date).format('D MMM YYYY'))
-                    Moment(date).format('D MMM YYYY')}}
                 />
               </Col>
             </Row>
