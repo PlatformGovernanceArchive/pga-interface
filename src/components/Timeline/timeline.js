@@ -50,7 +50,7 @@ class Timeline extends React.Component {
   }
 
   // Build Code for Timeline
-  buildPolicies = () => {
+  buildPolicyTimelines = () => {
     const policies=this.state.selectedPlatform.policies
     return (
       <Col>
@@ -62,11 +62,11 @@ class Timeline extends React.Component {
               </Col>
               <Col sm="10" id="timeline">
                 {
-                  console.log(
-                    'dates:',
-                    policy.dates,
-                    policy.dates.map(d => (this.transformDate(d)))
-                  )
+//                  console.log(
+//                    'dates:',
+//                    policy.dates,
+//                    policy.dates.map(d => (this.transformDate(d)))
+//                  )
                 }
                 <HorizontalTimeline
                   index={this.state.value}
@@ -105,7 +105,7 @@ class Timeline extends React.Component {
 //  }
 
 
-// Trigger updateSelection() upon props change
+  // Trigger updateSelection() upon props change
   componentDidUpdate(prevProps) {
     // Typical usage (don't forget to compare props):
     if (this.props.platforms !== prevProps.platforms) {
@@ -113,13 +113,20 @@ class Timeline extends React.Component {
     }
   }
 
+  // Trigger updateSelection() upon load
+  componentDidMount() {
+    if (this.props.platforms.length > 0) {
+      this.updateSelection();
+    }
+  }
+
 
   render(){
-
+    console.log(this.state.selectedPlatform.policies)
     // Render timeline when API returned data
     if (this.state.selectedPlatform.policies){
 
-      const policiesCode = this.buildPolicies();
+      const policiesCode = this.buildPolicyTimelines();
 
       return (
         <Row>
