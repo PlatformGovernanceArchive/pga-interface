@@ -550,6 +550,10 @@ ul{
             margin-right: 60px !important;
         }
 
+        .buttons li {
+            border-color: transparent !important;
+        }
+
         li::before {
             content: none;
         }
