@@ -16,8 +16,6 @@ class Documents extends React.Component {
 
     const selectedType = selectedPlatform.policies.filter(t => t.slug === this.props.type).pop();
 
-    const date = this.props.date;
-
     const selectedPlatformDiff = selectedType.diffchecks;
 
     return(

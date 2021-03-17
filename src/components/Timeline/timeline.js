@@ -1,7 +1,5 @@
 import React, {Fragment} from 'react';
-import { useHistory } from 'react-router-dom';
 import HorizontalTimeline from 'react-horizontal-timeline';
-import Moment from 'moment';
 
 // Import Bootstrap
 import Row from 'react-bootstrap/Row';
@@ -30,8 +28,6 @@ class Timeline extends React.Component {
 
     const selectedT = selectedP.policies.filter(t => t.slug === this.props.type).pop()
 
-    const selectedD = this.props.date
-
     this.setState({
       selectedPlatform: selectedP,
       selectedPolicy: selectedT,
@@ -47,13 +43,6 @@ class Timeline extends React.Component {
     let day = datelong.substr(6,2)
     let date = [year, month, day]
     return date.join('-')
-  }
-
-  getSelectedTime(k,i){
-    const key = 'value-' + k
-    const stateObj = {key: i}
-    console.log('State ob',stateObj)
-    return this.state.stateObj
   }
 
   // Build Code for Timeline

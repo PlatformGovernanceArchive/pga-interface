@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import Moment from 'moment';
 import ReactDiffViewer from 'react-diff-viewer';
 
