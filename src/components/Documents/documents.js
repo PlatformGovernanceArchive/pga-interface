@@ -1,23 +1,13 @@
 import React, {Fragment} from 'react';
-import Moment from 'moment';
 
 // Importing bootstrap
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import ReactDiffViewer from 'react-diff-viewer';
+// Importing Components
+import Document from '../document'
 
-class Document extends React.Component {
-
-  // Parses date from YYYYMMDDMMSS to YYYY-MM-DD
-  transformDate = (d) => {
-    let datelong=d.toString()
-    let year = datelong.substr(0,4)
-    let month = datelong.substr(4,2)
-    let day = datelong.substr(6,2)
-    let date = [year, month, day]
-    return date.join('-')
-  }
+class Documents extends React.Component {
 
   buildPolicyDocuments = () => {
     const platforms = this.props.platforms;
@@ -33,15 +23,7 @@ class Document extends React.Component {
     return(
       <Fragment>
         {selectedPlatformDiff.map((d, ii) => (
-          <Row key={ii}>
-            <Col>
-              <h3>
-                <span className="dateOld">{Moment(this.transformDate(d.dateOld)).format("DD MMMM YYYY")}</span>
-                <span className="dateOld"> {Moment(this.transformDate(d.dateNew)).format("DD MMMM YYYY")}</span>
-              </h3>
-              <ReactDiffViewer oldValue={d.mdOld} newValue={d.mdNew} splitView={true} useDarkTheme={true}/>
-            </Col>
-          </Row>
+          <Document documents={d} key={ii} date={this.props.date} />
         ))}
       </Fragment>
     )
@@ -78,5 +60,5 @@ class Document extends React.Component {
     }
   }
 }
-export default Document
+export default Documents
 

@@ -18,7 +18,7 @@ import Container from 'react-bootstrap/Container';
 import Hero from './components/hero'
 import Intro from './components/intro'
 import Navigation from './components/Navigation';
-import Document from './components/Document';
+import Documents from './components/Documents';
 import Timeline from './components/Timeline';
 import PolicyOverview from './components/PolicyOverview';
 import ScrollToTop from './components/scrollToTop';
@@ -93,7 +93,7 @@ const DocumentView = ({ match }) => {
         platform={match.params.platformSlug}
       />
       <Container fluid className="documentViewer">
-        <Document
+        <Documents
           platform={match.params.platformSlug}
           type={match.params.typeSlug}
           date={dateSelected}
@@ -135,7 +135,7 @@ class App extends React.Component {
   render() {
     return(
       <Router>
-        <ScrollToTop>
+        <ScrollToTop path="/">
 
           <Helmet>
             <title>{Strings.Meta_PageTitle}</title>
