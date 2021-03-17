@@ -81,7 +81,7 @@ $break-points: (
     'wide-screen':  1400px
 );
 
-$font-regular: 'Open Sans', monospace;
+$font-regular: 'PT Sans', monospace;
 $font-monospace: 'Droid Sans Mono', monospace;
 
 
@@ -92,7 +92,7 @@ $font-monospace: 'Droid Sans Mono', monospace;
 // typographically correct uppercase
 @mixin uppercase{
     text-transform: uppercase;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
 }
 
 @mixin explanation{
@@ -314,6 +314,8 @@ ul{
 .logotype{
     @include uppercase;
 
+    font-family: 'Open Sans', Helvetica, sans-serif;
+
     max-width: 8em;
     text-align: right;
     line-height: 1em;
@@ -412,10 +414,11 @@ ul{
 .main-nav{
     justify-content: flex-end;
     background: theme-color('background');
-    box-shadow: theme-color('background')+#111 000 3px 0 5px;
+    box-shadow: #000 0 2px 6px;
     padding: .8rem 1rem;
     position: fixed;
     width: 100%;
+    z-index: 999;
 
     .logotype{
         font-size: 0.6em;
@@ -507,12 +510,87 @@ ul{
     .documents{
         flex: 70% 0 0;
         overflow-y: scroll;
-        margin-top: 4em;
+        padding-top: 1em;
+
+        h3{
+            display: flex;
+            flex-direction: row;
+            margin-top: 2em;
+            position: sticky;
+            z-index: 9999;
+            top: 0px;
+
+            span{
+                @include uppercase;
+
+                font-weight: 300;
+                font-size: 1rem;
+                flex: 50% 0 0;
+                padding-left: 70px;
+            }
+        }
+
+        table{
+
+            border: 1px solid #fff3;
+            border-radius: 10px;
+            border-collapse: separate;
+
+            pre {
+                font-family: $font-monospace;
+            }
+
+
+            [class*="code-fold"]{
+                a{
+                    border-bottom: 2px dotted #fff4;
+                    text-decoration: none !important;
+                }
+
+                pre{
+                    font-weight: 400;
+                    color: #fff9;
+                }
+            }
+
+            [class*="gutter"]{
+                min-width: 35px;
+                padding: 0 5px;
+            }
+
+            td:nth-child(1),
+            td:nth-child(2),
+            td:nth-child(3){
+                opacity: 0.5;
+            }
+
+            [class*="diff-removed"]{
+                background: #fff1;
+            }
+
+
+            [class*="word-removed"]{
+                background: #fff3;
+                text-decoration: line-through;
+            }
+
+            // Hide grey backgrounds
+            &,
+            [class*="empty"],
+            [class*="gutter"],
+            [class*="code-fold"],
+            [class*="marker"]{
+                background: transparent;
+            }
+        }
     }
 
     .timelines{
         flex: 30% 0 0;
         overflow: hidden;
+        padding: 10px 0 20px;
+        box-shadow: #000 0 -2px 6px;
+        z-index: 999;
 
         .col{
             height: 100%;
@@ -527,16 +605,24 @@ ul{
                 flex: 33% 0 0;
                 overflow: hidden;
 
+                &.inactive{
+                    opacity: 0.3;
+                    filter: grayscale(100%);
+                }
+
                 .col:first-child{
                     display: flex;
                     flex-direction: column;
+                    flex: content 0 0;
 
                     h3{
                         @include uppercase;
                         font-size: 0.8em;
-                        margin: auto 0;
+                        margin: auto 0 0;
+                        padding-bottom: 7px;
                     }
                 }
+
             }
         }
     }

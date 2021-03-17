@@ -63,11 +63,13 @@ class Timeline extends React.Component {
       <Fragment>
         <ul className="policies">
           {policies.map((policy,key)=> (
-            <Row key={key} className="policy">
+            <Row key={key}
+              className={`policy ${policy.slug===this.state.selectedPolicy.slug ? "active" : "inactive"} ${policy.slug}`}
+            >
               <Col>
                 <h3>{policy.name}</h3>
               </Col>
-              <Col sm="10" className="horizontalTimeline">
+              <Col className="horizontalTimeline">
                 {
 //                  console.log(
 //                    'dates:',
@@ -129,6 +131,10 @@ class Timeline extends React.Component {
   componentDidUpdate = (prevProps) => {
     // Typical usage (don't forget to compare props):
     if (this.props.platforms !== prevProps.platforms) {
+      this.updateSelection();
+    }
+
+    if (this.props.date !== prevProps.date) {
       this.updateSelection();
     }
   }
