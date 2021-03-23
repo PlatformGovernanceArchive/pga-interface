@@ -137,7 +137,7 @@ class Timeline extends React.Component {
 
 
   render(){
-    console.log(this.state.selectedPlatform.policies)
+    console.log('Policies:', this.state.selectedPlatform.policies)
     // Render timeline when API returned data
     if (this.state.selectedPlatform.policies){
 

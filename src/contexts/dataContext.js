@@ -1,8 +1,8 @@
 import React from 'react';
 
 // Import static files
-//import someCsv from '../csv/Data1.csv';
-//import someOtherCsv from '../csv/Data2.csv';
+// import someCsv from '../csv/Data1.csv';
+// import someOtherCsv from '../csv/Data2.csv';
 
 //API data
 //const PLATFORMS_URL = "https://pgarchive-307718.nw.r.appspot.com/platforms";
@@ -13,10 +13,6 @@ export const DataContext = React.createContext();
 
 export class DataProvider extends React.Component {
 
-  // state = {
-  //     status: 'initial',
-  //     platforms: []
-  // };
   state = {
     status: 'initial',
 //    setValue: this.setValue,
@@ -144,8 +140,8 @@ export class DataProvider extends React.Component {
               status: 'data loaded from server'
           })
       })
-      .catch(err => {
-          console.log(err);
+      .catch((err, response) => {
+          console.log(err, '|', response);
       });
 
     console.log('status in dataContext: ', this.state.status)
@@ -169,13 +165,13 @@ export class DataProvider extends React.Component {
 //          console.log(err);
 //      });
 //
-//    console.log('status in dataContext: ', this.state.status)
+//    console.log('status in dataContext: ',    this.state.status)
 //  }
 
   componentDidMount() {
     this.getDataFromServer();
 //    this.fillWithDummyData();
-    localStorage.setItem('platforms', 'test')
+//    localStorage.setItem('platforms', 'test')
   }
 
 //  componentDidUpdate(prevProps, prevState) {
