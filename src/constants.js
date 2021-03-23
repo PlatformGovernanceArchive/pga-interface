@@ -6,19 +6,23 @@ export const ProceedToOtherPhase = 'Proceed to another phase';
 
 // Home
 // Hero
-export const Hero_Quote = '“The way platforms order and govern user activities has tremendous effects on how communication, politics, mobility and other key sectors are organised in the digital society.”';
+export const Hero_Quote = '“The way platforms govern user activities has tremendous consequences for how our increasingly digital society is organised. This archive enables citizens, researchers and journalists alike to understand how this governance by platforms has changed over time.”';
 export const Hero_Typing = 'An archive of all policy documents by';
 export const Hero_LearnMore = 'Learn more';
 // Intro
 export const Intro_About_Headline = 'About this project';
-export const Intro_About_Text = 'The Platform Governance Archive (PGA) is a structured and open database with content policies of key platforms over their full life-time. While public debates over the handling of misinformation and hate speech by major platforms have long reached mainstream audiences and policy-makers, there is little accessible material to rigidly study short- and long-term developments of companies’ internal policies. The [Alexander von Humboldt Institute for Internet and Society](https://www.hiig.de/en) has built up and curated a vast collection of thousands of these documents, ranging from Terms of Service (ToS)  to community guidelines  On this basis, the PGA enables researchers and journalists alike to address key questions of platform governance: How do misinformation or hate speech policies compare across platforms and over time? What are the factors that drive platforms to change policies? The PGA is the first online resource of its kind. Its goal is to enhance public knowledge of platform governance by enabling research collaborations and journalistic reporting, and by already providing exemplary analyses of the material.';
-export const Intro_DataPaper_Headline = 'Data Paper 1.0';
-export const Intro_DataPaper_Text = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.';
-export const Intro_DataPaper_Button = 'Read the paper';
+export const Intro_About_Text = 'The Platform Governance Archive (PGA) is a project to facilitate critical engagement with the way platforms order and govern our communication and activities. It offers an interactive exploration of some major platforms’ set of rules, as well as access to a curated and structured database containing key policies of the platforms’ full lifetime.';
+export const Intro_About_Button = 'Learn more about the team and the project';
+export const Intro_DataPaper_Headline = 'Data Access And Research';
+export const Intro_DataPaper_Text = `Data for this project has been collected by a combination of automated and manual approaches. For the historical data, the process builds mostly on the Internet Archive’s Wayback Machine. We have collected data for ten major platforms and four different document types (terms of service, community guidelines, privacy policies, copyright policies). With this first release, we are starting with Facebook, YouTube, Twitter and Instagram – and will extend this collection in the weeks and months ahead.`;
+export const Intro_DataPaper_Button = 'Learn more about data and research';
 export const Intro_Contribute_Headline = 'How to contribute and cite';
-export const Intro_Contribute_Text = `If you have found the Platform Governance Archive useful in your research, or if you want to reference it in your work, please consider to cite the paper we presented above. You can read the article in Green Open Access at the following link:
+export const Intro_Contribute_Text = `When you use the Platform Governance Archive in your research or reporting, please refer to us along these lines: 
 
-[Katzenbach, C., Magalhães, J. C., Koppe, A., & Sühr, T. (2021) Lorem ipsum dolor sit amet, consetetur sadipscing elitr. *Sed diam nonumy eirmod tempor.* https://doi.org/10.1177/1464884917734055](http://www.hiig.de)`;
+Katzenbach, C., Magalhães, J. C., Kopps, A., Sühr, T. & Wunderlich, L. (2021). The Platform Governance Archive. Alexander von Humboldt Institute for Internet and Society. [ *https://doi.org/10.17605/OSF.IO/XSBPT*](https://doi.org/10.17605/OSF.IO/XSBPT)
+
+
+We will develop and extend the archive in the upcoming months. If you have any suggestion or feedback don’t hesitate to contact project lead Christian Katzenbach [(katzenbach@hiig.de)](mailto:katzenbach@hiig.de).`;
 export const Intro_Explore = 'Explore the archive';
 
 // Policy overview
@@ -39,4 +43,33 @@ export const Meta_PageTitle = 'The Platform Governance Archive 1.0';
 export const Meta_Description = 'The Platform Governance Archive (PGA) is a structured and open database with content policies of key platforms over their full life-time.';
 
 
+//About Page
+export const About_Intro_One = `The Platform Governance Archive (PGA) is a project to facilitate critical engagement with the way platforms order and govern our communication and activities. It offers an interactive exploration of major platforms’ set of rules, as well as access to a curated and structured database containing the key policies of the platforms’ full life-time. While public debates over e.g. the handling of misinformation and hate speech by major platforms have long reached mainstream audiences and policymakers, there is little accessible material to rigorously study the short- and long-term developments of companies’ internal policies. The PGA team at the Alexander von Humboldt Institute for Internet and Society has collected and curated a vast collection of thousands of these documents, ranging from Terms of Service (ToS) to Community Guidelines.
 
+The PGA proudly joins the ranks of a set of similarly spirited initiatives such as the  [*Princeton-Leuven Longitudinal Corpus of Privacy Policies*](https://privacypolicies.cs.princeton.edu//) and the [*Open Terms Archive*](https://disinfo.quaidorsay.fr/en/open-terms-archive). What sets the PGA apart from these projects are 1) our focus on substantial content policies of platforms (that is, we include not only the legalistic terms of service and privacy policies, but also the much more substantial community guidelines) and 2) a combination of automated and manual collection processes that has allowed us to identify when exactly actual changes to the policies occurred.`;
+
+export const About_Intro_Button = 'Learn more about Data and Research';
+export const About_Intro_Two = `On this basis, the PGA can enable citizens, researchers and journalists alike to address key questions of platform governance: How do misinformation or hate speech policies compare across platforms and over time? What are the factors that drive platforms to change policies? If you are interested in using the data or have questions (or concerns) the collection, please consult [**Data and Research**](/research) and reach out to the project team. The full data-set will be available at the end of Q2/2021.`;
+
+export const About_Team_Headline = 'Team';
+export const About_TeamLead_Text = `#### Idea and Project Lead:
+[Christian Katzenbach](https://www.hiig.de/en/christian-katzenbach/) (HIIG),  [katzenbach@hiig.de](mailto:katzenbach@hiig.de)
+
+[João Carlos Magalhães](https://www.hiig.de/en/joao-carlos-vieira-magalhaes/) (HIIG),  [joao.magalhaes@hiig.de](mailto:joao.magalhaes@hiig.de)
+`;
+export const About_Team_Text = `
+#### Project Team:
+
+[Adrian Kopps](https://www.hiig.de/en/adrian-kopps/) (HIIG), [adrian.kopps@hiig.de](mailto:adrian.kopps@hiig.de)
+
+[Tom Sühr](https://www.hiig.de/en/tom-suehr/) (HIIG), [tom.suehr@hiig.de](mailto:tom.suehr@hiig.de)
+
+[Larissa Wunderlich](https://www.larissawunderlich.de/), [info@larissawunderlich.de](mailto:info@larissawunderlich.de)
+
+The project is inspired by Kirsten Gollatz’ pioneering work on the longitudinal collection and analysis of platform policies in her dissertation [“Die private Governance der Plattformen zur Regelung grenzüberschreitender Kommunikation”](https://www.zora.uzh.ch/id/eprint/188820/) at the University of Zurich.`;
+
+export const About_Funding_Headline = 'Funding';
+export const About_Funding_Text = `This is a project hosted and sustained by the Alexander von Humboldt Institute for Internet and Society (HIIG). The research and data collection part has substantially benefited from funding by the European Union’s Horizon 2020 research and innovation programme as part of the [*ReCreating Europe*](https://www.hiig.de/en/project/platform-governance-and-copyright/) consortium (Grant Agreement Number 860094). The [*Open Science Fellowship*](https://de.wikiversity.org/wiki/Wikiversity:Fellow-Programm_Freies_Wissen/Einreichungen/Platform_Governance_Archives) offered by Wikimedia Deutschland to João Carlos Magalhães was vital for the launch of the PGA by enabling concept building and data cleaning.`;
+
+//Data and Research
+export const DataAndResearch_Intro_Headline = 'Data and Research';

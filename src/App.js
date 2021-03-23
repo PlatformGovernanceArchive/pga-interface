@@ -24,9 +24,12 @@ import PolicyOverview from './components/PolicyOverview';
 import ScrollToTop from './components/scrollToTop';
 import * as Strings from './constants';
 import { DataContext } from './contexts/dataContext'
-
+import About from "./pages/about";
 // Importing background images
 import backgroundHome from "./assets/img/background-home.png";
+import euLogo from "./assets/img/EUlog_funding.png";
+import about from "./pages/about";
+import Research from "./pages/research";
 
 const Home = () => (
   <div className="App home" style={{backgroundImage: 'url('+backgroundHome+')'}}>
@@ -42,6 +45,24 @@ const PickPolicy = ({ match }) => {
       <PolicyOverview />
     </div>
   )
+}
+
+const AboutPage = ({ match }) => {
+  return(
+      <div className="App">
+        <Navigation />
+        <About />
+      </div>
+  )
+}
+
+const DataAndResearch = ({ match }) => {
+    return(
+        <div className="App">
+            <Navigation />
+            <Research />
+        </div>
+    )
 }
 
 const setDate = (platform, type, date, context) => {
@@ -154,6 +175,8 @@ class App extends React.Component {
             <Route path="/view/:platformSlug/:typeSlug/:dateStamp" component={DocumentView} />
             <Route path="/view/:platformSlug/:typeSlug" component={DocumentView} />
             <Route path="/explore" component={PickPolicy} />
+            <Route path="/about" component={AboutPage} />
+            <Route path="/research" component={DataAndResearch} />
             <Route path="/:page" component={Page} />
             <Route exact={true} path="/" component={Home} />
           </Switch>

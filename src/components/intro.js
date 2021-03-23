@@ -32,6 +32,9 @@ class Intro extends React.Component{
                   source={Strings.Intro_About_Text}
                   renderers={this.renderers}
                 />
+                <Link to={`/about`}>
+                  <button className="explore">{Strings.Intro_About_Button}</button>
+                </Link>
               </Col>
             </Row>
           </section>
@@ -45,7 +48,9 @@ class Intro extends React.Component{
                   source={Strings.Intro_DataPaper_Text}
                   renderers={this.renderers}
                 />
+                <Link to={`/research`}>
                 <button>{Strings.Intro_DataPaper_Button}</button>
+                </Link>
               </Col>
             </Row>
           </section>

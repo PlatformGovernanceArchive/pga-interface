@@ -1,6 +1,6 @@
 import React from 'react';
 import Moment from 'moment';
-import ReactDiffViewer from 'react-diff-viewer';
+import ReactDiffViewer, {DiffMethod} from 'react-diff-viewer';
 
 // Importing bootstrap
 import Row from 'react-bootstrap/Row';
@@ -47,7 +47,7 @@ class Document extends React.Component {
             <span className="dateOld">{Moment(this.transformDate(d.dateOld)).format("DD MMMM YYYY")}</span>
             <span className="dateOld"> {Moment(this.transformDate(d.dateNew)).format("DD MMMM YYYY")}</span>
           </h3>
-          <ReactDiffViewer oldValue={d.mdOld} newValue={d.mdNew} splitView={true} useDarkTheme={true}/>
+          <ReactDiffViewer oldValue={d.mdOld} newValue={d.mdNew} splitView={true} useDarkTheme={true} compareMethod={DiffMethod.WORDS}/>
         </Col>
       </Row>
     )
