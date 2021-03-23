@@ -31,8 +31,10 @@ import euLogo from "./assets/img/EUlog_funding.png";
 import about from "./pages/about";
 import Research from "./pages/research";
 
+const appClassName = "App darkTheme"
+
 const Home = () => (
-  <div className="App home" style={{backgroundImage: 'url('+backgroundHome+')'}}>
+  <div className={`${appClassName} home`} style={{backgroundImage: 'url('+backgroundHome+')'}}>
     <Hero />
     <Intro />
   </div>
@@ -40,7 +42,7 @@ const Home = () => (
 
 const PickPolicy = ({ match }) => {
   return(
-    <div className="App pick">
+    <div className={`${appClassName} pick`}>
       <Navigation />
       <PolicyOverview />
     </div>
@@ -49,7 +51,7 @@ const PickPolicy = ({ match }) => {
 
 const AboutPage = ({ match }) => {
   return(
-      <div className="App">
+      <div className={appClassName}>
         <Navigation />
         <About />
       </div>
@@ -58,7 +60,7 @@ const AboutPage = ({ match }) => {
 
 const DataAndResearch = ({ match }) => {
     return(
-        <div className="App">
+        <div className={appClassName}>
             <Navigation />
             <Research />
         </div>
@@ -84,9 +86,11 @@ const setDate = (platform, type, date, context) => {
     //Get dates from policy
     const { dates: datesData } = selectedPolicy[0]
     //Get most recent date (-1) in the format YYYYMMDD (0,8)
-    let recentDate=datesData.slice(-1)[0].slice(0,8)
+//    let recentDate=datesData.slice(-1)[0].slice(0,8)
+    let recentDate=datesData.slice(-1)[0]
 
-  //  console.log('Dates:', recentDate);
+
+//    console.log('Dates:', recentDate);
 
     return recentDate
   }
@@ -109,7 +113,7 @@ const DocumentView = ({ match }) => {
   const history = useHistory()
 
   return(
-    <div className="App">
+    <div className={`${appClassName} view`}>
       <Navigation
         platform={match.params.platformSlug}
       />
@@ -141,7 +145,7 @@ const Page = ({ match }) => {
   const CurrentPage = components[match.params.page] || components['404'];
 
   return(
-    <div className={"App " + match.params.page}>
+    <div className={`${appClassName} ${match.params.page}`}>
       <Navigation  page={match.params.page} />
       <CurrentPage />
     </div>

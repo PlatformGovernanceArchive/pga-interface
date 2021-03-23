@@ -6,7 +6,7 @@ import { DataProvider } from './contexts/dataContext'
 
 ReactDOM.render(
   <DataProvider>
-    <App />
+    <App theme="darkTheme"/>
   </DataProvider>,
   document.getElementById('root')
 );

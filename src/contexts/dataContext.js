@@ -125,7 +125,7 @@ export class DataProvider extends React.Component {
           console.log(err, '|', response);
       });
 
-    console.log('status in dataContext: ', this.state.status)
+//    console.log('status in dataContext: ', this.state.status)
   }
 
   componentDidMount() {

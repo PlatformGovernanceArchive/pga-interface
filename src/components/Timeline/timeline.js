@@ -31,7 +31,7 @@ class Timeline extends React.Component {
     const policyIndex = selectedP.policies.findIndex(policy => policy.slug === this.props.type)
     const dateIndex = selectedT.dates.findIndex(date => date === this.props.date)
 
-//    console.log('position: ',policyIndex, dateIndex)
+//    console.log('position: ',policyIndex, dateIndex, this.props.date)
 
     this.setState({
       selectedPlatform: selectedP,
@@ -69,7 +69,8 @@ class Timeline extends React.Component {
 //                  console.log(
 //                    'dates:',
 //                    policy.dates,
-//                    policy.dates.map(d => (this.transformDate(d)))
+//                    policy.dates.map(d => (this.transformDate(d))),
+//                    this.state[`value_${key}`]
 //                  )
                 }
                 <HorizontalTimeline

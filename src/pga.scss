@@ -19,13 +19,6 @@
     @return map-get($hiig-colors, $key);
 }
 
-@function theme-color($key: 'copy') {
-    @return map-get($theme-colors, $key);
-}
-
-@function scenario-color($key: 'civil-war') {
-    @return map-get($scenario-colors, $key);
-}
 
 @function size($key: 'copy') {
     @return map-get($font-sizes, $key);
@@ -37,6 +30,10 @@
 
 @function device-size($key: 'mobile') {
     @return map-get($break-points, $key);
+}
+
+@function theme-get($key) {
+    @return map-get($theme-map, $key);
 }
 
 
@@ -55,13 +52,21 @@ $hiig-colors: (
     'darkgreen': #859D2A
 );
 
-$theme-colors: (
+$themes: (
+  darkTheme: (
     'copy':       #fff,
     'grey':       #707070,
     'small':      #999999,
-    'light-grey': #cccccc,
     'primary':    hiig('darkblue'),
     'background': #08131e
+  ),
+  lightTheme: (
+    'copy':       #666,
+    'grey':       #707070,
+    'small':      #999999,
+    'primary':    hiig('darkblue'),
+    'background': #fff
+  )
 );
 
 $font-sizes: (
@@ -95,6 +100,7 @@ $break-points: (
 
 $font-regular: 'PT Sans', monospace;
 $font-monospace: 'Droid Sans Mono', monospace;
+
 
 
 //
@@ -183,17 +189,23 @@ $font-monospace: 'Droid Sans Mono', monospace;
     }
     @else{
         @if $solid {
-            border-color: theme-color('primary');
-            background: theme-color('primary');
+            @include theme() {
+                border-color: theme-get('primary');
+                background: theme-get('primary');
+            }
             color: white;
         }
         @else{
-            border-color: theme-color('primary');
-            color: theme-color('primary');
+            @include theme() {
+                border-color: theme-get('primary');
+                color: theme-get('primary');
+            }
             background: transparent;
 
             @if $arrow != 'none'{
-                border-color: theme-color('primary');
+                @include theme() {
+                    border-color: theme-get('primary');
+                }
             }
         }
     }
@@ -218,6 +230,25 @@ $font-monospace: 'Droid Sans Mono', monospace;
     }
 }
 
+@mixin theme() {
+  @each $theme, $map in $themes {
+    // $theme: darkTheme, lightTheme
+    // $map: ('text-color': ..., 'bg-color': ...)
+
+    // make the $map globally accessible, so that theme-get() can access it
+    $theme-map: $map !global;
+
+    // make a class for each theme using interpolation -> #{}
+    // use & for making the theme class ancestor of the class
+    // from which you use @include theme() {...}
+    .#{$theme} & {
+      @content;    // the content inside @include theme() {...}
+    }
+  }
+  // no use of the variable $theme-map now
+  $theme-map: null !global;
+}
+
 //
 //               THEME
 //
@@ -230,9 +261,14 @@ html {
 }
 
 body{
+//    color: white;
+
+    @include theme() {
+        color: theme-get('copy');
+    }
+
     font-family: $font-regular;
     font-size: size('copy');
-    color: white;
 }
 
 
@@ -247,7 +283,9 @@ a{
     text-decoration: none;
 
     &:hover{
-        color: theme-color('grey');
+        @include theme() {
+            color: theme-get('grey');
+        }
         text-decoration: none;
     }
 
@@ -379,6 +417,12 @@ ul{
 }
 
 .intro{
+    @include theme() {
+        background: linear-gradient(
+            rgba(theme-get('background'),0)
+            rgba(theme-get('background'),.8)
+        );
+    }
     background: linear-gradient(#0000, #000c);
     padding-bottom: 4em;
 
@@ -412,8 +456,10 @@ ul{
 
 // Navigation
 .main-nav{
+    @include theme() {
+        background: theme-get('background');
+    }
     justify-content: flex-end;
-    background: theme-color('background');
     box-shadow: #000 0 2px 6px;
     padding: .8rem 1rem;
     position: fixed;
@@ -421,8 +467,10 @@ ul{
     z-index: z-index('navi');
 
     .logotype{
+        @include theme() {
+            color: rgba(theme-get('background'), 0.6);
+        }
         font-size: 0.6em;
-        color: rgba(white, 0.6);
         margin: 0;
     }
 
@@ -435,14 +483,11 @@ ul{
 .slide-pane__overlay{
     z-index: z-index('off-canvas');
 
-    .slide-pane{
-        background: theme-color('background');
-        color: white;
-    }
-
-    .slide-pane__header{
-        background: theme-color('background');
-        color: white;
+    .slide-pane, .slide-pane__header{
+        @include theme() {
+            background: theme-get('background');
+            color: theme-get('copy');
+        }
     }
 
     .nav-item{
@@ -598,6 +643,10 @@ ul{
                 background: #fff1;
             }
 
+            [class*="diff-added"]{
+                background: #044B5388;
+            }
+
 
             [class*="word-removed"]{
                 background: #fff3;
@@ -718,23 +767,9 @@ ul{
     }
 }
 
-// Foooter
-footer{
-    margin-top: 100px;
-
-    .disclaimer{
-        color: theme-color('small');
-        font-size: size('tag');
-    }
-
-    .logo{
-        width: 50%;
-        padding-left: 15px;
-    }
-
-}
 
 // Print view
+
 
 // when printed only
 
