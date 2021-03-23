@@ -31,6 +31,10 @@
     @return map-get($font-sizes, $key);
 }
 
+@function z-index($key: 'documents') {
+    @return map-get($z-index, $key);
+}
+
 @function device-size($key: 'mobile') {
     @return map-get($break-points, $key);
 }
@@ -73,6 +77,14 @@ $font-sizes: (
     'tag':          10pt,
     'big-tag':      16pt,
     'subheader':    11pt,
+);
+
+$z-index: (
+    'timeline':     50,
+    'navi':         50,
+    'sticky':       80,
+    'off-canvas':   100,
+    'documents':    0
 );
 
 $break-points: (
@@ -214,26 +226,14 @@ $font-monospace: 'Droid Sans Mono', monospace;
 // Prevent scrollbar from changing page width
 html {
     width: 100vw;
-//    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body{
     font-family: $font-regular;
     font-size: size('copy');
     color: white;
-//    margin: 0 auto;
-//    position: relative;
 }
-//
-//@include device('XL'){
-//    html{h2
-//        background: #666;
-//    }
-//
-//    body{
-//        max-width: 1600px;
-//    }
-//}
 
 
 // resetting browser styles
@@ -418,7 +418,7 @@ ul{
     padding: .8rem 1rem;
     position: fixed;
     width: 100%;
-    z-index: 999;
+    z-index: z-index('navi');
 
     .logotype{
         font-size: 0.6em;
@@ -429,6 +429,35 @@ ul{
     button{
         padding-left: 20px;
     }
+}
+
+// Off canvas navi
+.slide-pane__overlay{
+    z-index: z-index('off-canvas');
+
+    .slide-pane{
+        background: theme-color('background');
+        color: white;
+    }
+
+    .slide-pane__header{
+        background: theme-color('background');
+        color: white;
+    }
+
+    .nav-item{
+        @include uppercase;
+
+        &.divider{
+            height: 30px;
+            border-bottom: 2px solid #fff3;
+            margin-bottom: 30px;
+        }
+
+    }
+
+
+
 }
 
 // Policy Overview
@@ -517,7 +546,7 @@ ul{
             flex-direction: row;
             margin-top: 2em;
             position: sticky;
-            z-index: 9999;
+            z-index: z-index('sticky');
             top: 0px;
 
             span{
@@ -590,7 +619,7 @@ ul{
         overflow: hidden;
         padding: 10px 0 20px;
         box-shadow: #000 0 -2px 6px;
-        z-index: 999;
+        z-index: z-index('timeline');
 
         .col{
             height: 100%;
