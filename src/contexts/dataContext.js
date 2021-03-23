@@ -5,7 +5,7 @@ import React from 'react';
 //import someOtherCsv from '../csv/Data2.csv';
 
 //API data
-const PLATFORMS_URL = "https://pgarchive-307718.nw.r.appspot.com/platforms";
+//const PLATFORMS_URL = "https://pgarchive-307718.nw.r.appspot.com/platforms";
 //const SHEET_ID = process.env.REACT_APP_SHEET_ID;
 //const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -129,9 +129,14 @@ export class DataProvider extends React.Component {
 
   getDataFromServer = () => {
     this.setState({status: 'loadingData'})
-    fetch(PLATFORMS_URL, {
-      "method": "GET"
-    })
+    fetch('platforms.json'
+        ,{
+          headers : {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
+        }
+    )
       .then(response => response.json())
       .then(response => {
           this.setState({
