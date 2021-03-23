@@ -14,10 +14,10 @@ class Timeline extends React.Component {
       selectedPlatform: '',
       selectedPolicy: '',
       selectedDate: '',
-      value_0: 1,
-      value_1: 2,
-      value_2: 3,
-      value_3: 4,
+      value_0: 0,
+      value_1: 0,
+      value_2: 0,
+      value_3: 0,
       previous: 0
     }
   }
@@ -60,11 +60,11 @@ class Timeline extends React.Component {
               </Col>
               <Col className="horizontalTimeline">
                 {
-//                  console.log(
-//                    'dates:',
-//                    policy.dates,
-//                    policy.dates.map(d => (this.transformDate(d)))
-//                  )
+                  console.log(
+                    'dates:',
+                    policy.dates,
+                    policy.dates.map(d => (this.transformDate(d)))
+                  )
                 }
                 <HorizontalTimeline
                   index={this.state[`value_${key}`]}

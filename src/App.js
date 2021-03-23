@@ -93,13 +93,11 @@ const DocumentView = ({ match }) => {
         platform={match.params.platformSlug}
       />
       <Container fluid className="documentViewer">
-       {/*
         <Documents
           platform={match.params.platformSlug}
           type={match.params.typeSlug}
           date={dateSelected}
         />
-        */}
         <Timeline
           platform={match.params.platformSlug}
           type={match.params.typeSlug}
