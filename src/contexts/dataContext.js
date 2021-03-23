@@ -1,8 +1,7 @@
 import React from 'react';
 
 // Import static files
-// import someCsv from '../csv/Data1.csv';
-// import someOtherCsv from '../csv/Data2.csv';
+ import platformData from '../data/platforms.json';
 
 //API data
 //const PLATFORMS_URL = "https://pgarchive-307718.nw.r.appspot.com/platforms";
@@ -15,13 +14,8 @@ export class DataProvider extends React.Component {
 
   state = {
     status: 'initial',
-//    setValue: this.setValue,
     platforms: []
   };
-
-//  setValue = (platforms) => {
-//    this.setState({ platforms });
-//  }
 
   fillWithDummyData = () => {
     this.setState({
@@ -100,30 +94,17 @@ export class DataProvider extends React.Component {
     })
   }
 
-//  loadBackupData = () => {
-//    const csvData = {
-//      data1: someCsv,
-//      data2: someOtherCsv
-//    }
-//
-//    Object.keys(csvData).forEach((key) => {
-//
-//      readRemoteFile(csvData[key],{
-//        header: true,
-//        complete: (results) => {
-//          var googleData = results.data
-//          console.log("Result data:", googleData)
-//          this.setState({
-//            [key]: googleData,
-//            status: key + ' loaded'
-//          });
-//          console.log("Status:", this.state.status)
-//        }
-//      })
-//    });
-//  }
+  getDataFromSrcFile = () => {
 
-  getDataFromServer = () => {
+//    console.log('file:', platformData)
+
+    this.setState({
+        platforms: platformData,
+        status: 'data loaded from file'
+    })
+  }
+
+  getDataFromPublicFile = () => {
     this.setState({status: 'loadingData'})
     fetch('platforms.json'
         ,{
@@ -147,38 +128,10 @@ export class DataProvider extends React.Component {
     console.log('status in dataContext: ', this.state.status)
   }
 
-//  getDataFromServerAndStore = () => {
-//    this.setState({status: 'loadingData'})
-//    fetch(PLATFORMS_URL, {
-//      "method": "GET"
-//    })
-//      .then(response => response.json())
-//      .then(response => {
-//          this.setState({
-//              platforms: response
-//          })
-//      })
-//      .then(response => {
-//
-//      })
-//      .catch(err => {
-//          console.log(err);
-//      });
-//
-//    console.log('status in dataContext: ',    this.state.status)
-//  }
-
   componentDidMount() {
-    this.getDataFromServer();
-//    this.fillWithDummyData();
-//    localStorage.setItem('platforms', 'test')
+    this.getDataFromSrcFile();
   }
 
-//  componentDidUpdate(prevProps, prevState) {
-//    if (this.state.platforms !== prevState.platforms) {
-//      localStorage.setItem('platforms', this.state.value)
-//    }
-//  }
 
   render() {
     return (

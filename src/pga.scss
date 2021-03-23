@@ -447,11 +447,12 @@ ul{
 
     .nav-item{
         @include uppercase;
+        margin-bottom: 1em;
 
         &.divider{
-            height: 30px;
+            height: 2em;
             border-bottom: 2px solid #fff3;
-            margin-bottom: 30px;
+            margin-bottom: 2em;
         }
 
     }

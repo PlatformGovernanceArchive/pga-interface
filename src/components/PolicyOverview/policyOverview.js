@@ -15,7 +15,7 @@ class PolicyOverview extends React.Component{
   render () {
 
     const platforms = this.props.platforms
-    console.log('Platforms', platforms)
+//    console.log('Platforms', platforms)
 
     const platformOutput = platforms.map((p,i) => {
       return(

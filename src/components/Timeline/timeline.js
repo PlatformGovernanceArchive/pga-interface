@@ -28,10 +28,16 @@ class Timeline extends React.Component {
 
     const selectedT = selectedP.policies.filter(t => t.slug === this.props.type).pop()
 
+    const policyIndex = selectedP.policies.findIndex(policy => policy.slug === this.props.type)
+    const dateIndex = selectedT.dates.findIndex(date => date === this.props.date)
+
+//    console.log('position: ',policyIndex, dateIndex)
+
     this.setState({
       selectedPlatform: selectedP,
       selectedPolicy: selectedT,
-      selectedDate: this.props.date
+      selectedDate: this.props.date,
+      [`value_${policyIndex}`]: dateIndex
     });
   }
 
@@ -60,11 +66,11 @@ class Timeline extends React.Component {
               </Col>
               <Col className="horizontalTimeline">
                 {
-                  console.log(
-                    'dates:',
-                    policy.dates,
-                    policy.dates.map(d => (this.transformDate(d)))
-                  )
+//                  console.log(
+//                    'dates:',
+//                    policy.dates,
+//                    policy.dates.map(d => (this.transformDate(d)))
+//                  )
                 }
                 <HorizontalTimeline
                   index={this.state[`value_${key}`]}
@@ -137,7 +143,8 @@ class Timeline extends React.Component {
 
 
   render(){
-    console.log('Policies:', this.state.selectedPlatform.policies)
+//    console.log('Policies:', this.state.selectedPlatform.policies)
+
     // Render timeline when API returned data
     if (this.state.selectedPlatform.policies){
 

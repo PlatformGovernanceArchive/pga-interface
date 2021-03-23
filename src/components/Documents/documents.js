@@ -11,7 +11,7 @@ class Documents extends React.Component {
 
   buildPolicyDocuments = () => {
     const platforms = this.props.platforms;
-    console.log('Platforms: ',platforms)
+//    console.log('Platforms: ',platforms)
 
     const selectedPlatform = platforms.filter(p => p.slug === this.props.platform).pop();
 

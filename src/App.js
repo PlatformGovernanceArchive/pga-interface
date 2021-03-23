@@ -48,7 +48,6 @@ const setDate = (platform, type, date, context) => {
 
 //  console.log('Context:', context);
   const { platforms: platformData } = context
-
   if (date){
     return date
   }
@@ -79,6 +78,7 @@ const setDate = (platform, type, date, context) => {
 const DocumentView = ({ match }) => {
 
   const contextValue = React.useContext(DataContext);
+
   const dateSelected = setDate(
     match.params.platformSlug,
     match.params.typeSlug,
