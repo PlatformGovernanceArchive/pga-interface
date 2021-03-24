@@ -10,7 +10,7 @@ import React from 'react';
 
 export const DataContext = React.createContext();
 
-export class DataProvider extends React.Component {
+export default class DataProvider extends React.Component {
 
   state = {
     status: 'initial',
