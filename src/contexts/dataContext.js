@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Import static files
- import platformData from '../data/platforms.json';
+const platformData = await import('../data/platforms.json');
 
 //API data
 //const PLATFORMS_URL = "https://pgarchive-307718.nw.r.appspot.com/platforms";
@@ -94,7 +94,7 @@ export class DataProvider extends React.Component {
     })
   }
 
-   getDataFromSrcFile = () => {
+  getDataFromSrcFile = () => {
 
 //    console.log('file:', platformData)
 
@@ -128,8 +128,8 @@ export class DataProvider extends React.Component {
 //    console.log('status in dataContext: ', this.state.status)
   }
 
-  async componentDidMount() {
-    await this.getDataFromSrcFile();
+  componentDidMount() {
+    this.getDataFromSrcFile();
   }
 
 
