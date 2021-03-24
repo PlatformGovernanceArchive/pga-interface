@@ -17,7 +17,7 @@ class About extends React.Component{
 
     renderers = {
         link: ({href, children}) => {
-            return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
+            return <a href={href} rel="noopener noreferrer">{children}</a>
         }
     };
 
