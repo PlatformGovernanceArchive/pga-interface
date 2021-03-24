@@ -40,6 +40,7 @@ class Document extends React.Component {
 
   render() {
     const d=this.props.documents
+
     return (
       <Row key={this.props.key} ref={this.myRef}>
         <Col>

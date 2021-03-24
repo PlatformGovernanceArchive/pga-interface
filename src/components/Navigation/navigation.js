@@ -23,7 +23,6 @@ class TopNavigation extends React.Component {
   }
 
   render() {
-
     return(
       <Fragment>
         <Navbar collapseOnSelect staticTop expand="xl" variant="dark" className="main-nav">
