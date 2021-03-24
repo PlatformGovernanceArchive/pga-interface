@@ -106,7 +106,7 @@ export class DataProvider extends React.Component {
 
   getDataFromPublicFile = () => {
     this.setState({status: 'loadingData'})
-    fetch('platforms.json'
+    fetch('/platforms.json'
         ,{
           headers : {
             'Content-Type': 'application/json',
