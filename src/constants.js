@@ -11,10 +11,14 @@ export const Hero_Typing = 'An archive of  key policy documents by';
 export const Hero_LearnMore = 'Learn more';
 // Intro
 export const Intro_About_Headline = 'About this project';
-export const Intro_About_Text = 'The Platform Governance Archive (PGA) is a project to facilitate critical engagement with the way platforms order and govern our communication and activities. It offers an interactive exploration of some major platforms’ set of rules, as well as access to a curated and structured database containing key policies of the platforms’ full lifetime.';
+export const Intro_About_Text = `The Platform Governance Archive (PGA) is a project to facilitate critical engagement with the way platforms order and govern our communication and activities. It offers an interactive exploration of some major platforms’ set of rules, as well as access to a curated and structured database containing key policies of the platforms’ full lifetime.
+
+[Learn more about the team and the project](/about)`;
 export const Intro_About_Button = 'Learn more about the team and the project';
 export const Intro_DataPaper_Headline = 'Data Access And Research';
-export const Intro_DataPaper_Text = `Data for this project has been collected by a combination of automated and manual approaches. For the historical data, the process builds mostly on the Internet Archive’s Wayback Machine. We have collected data for ten major platforms and four different document types (terms of service, community guidelines, privacy policies, copyright policies). With this first release, we are starting with Facebook, YouTube, Twitter and Instagram – and will extend this collection in the weeks and months ahead.`;
+export const Intro_DataPaper_Text = `Data for this project has been collected by a combination of automated and manual approaches. For the historical data, the process builds mostly on the Internet Archive’s Wayback Machine. We have collected data for ten major platforms and four different document types (terms of service, community guidelines, privacy policies, copyright policies). With this first release, we are starting with Facebook, YouTube, Twitter and Instagram – and will extend this collection in the weeks and months ahead.
+
+[Learn more about data and research](/research)`;
 export const Intro_DataPaper_Button = 'Learn more about data and research';
 export const Intro_Contribute_Headline = 'How to contribute and cite';
 export const Intro_Contribute_Text = `When you use the Platform Governance Archive in your research or reporting, please refer to us along these lines: 
@@ -53,13 +57,13 @@ export const About_Intro_Button = ``;
 export const About_Intro_Two = `On this basis, the PGA can enable citizens, researchers and journalists alike to address key questions of platform governance: How do misinformation or hate speech policies compare across platforms and over time? What are the factors that drive platforms to change policies? If you are interested in using the data or have questions (or concerns) the collection, please consult [**Data and Research**](/research) and reach out to the project team. The full data-set will be available at the end of Q2/2021.`;
 
 export const About_Team_Headline = 'Team';
-export const About_TeamLead_Text = `#### Idea and Project Lead:
+export const About_TeamLead_Text = `### Idea and Project Lead:
 [Christian Katzenbach](https://www.hiig.de/en/christian-katzenbach/) (HIIG),  [katzenbach@hiig.de](mailto:katzenbach@hiig.de)
 
 [João Carlos Magalhães](https://www.hiig.de/en/joao-carlos-vieira-magalhaes/) (HIIG),  [joao.magalhaes@hiig.de](mailto:joao.magalhaes@hiig.de)
 `;
 export const About_Team_Text = `
-#### Project Team:
+### Project Team:
 
 [Adrian Kopps](https://www.hiig.de/en/adrian-kopps/) (HIIG), [adrian.kopps@hiig.de](mailto:adrian.kopps@hiig.de)
 

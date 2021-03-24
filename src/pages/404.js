@@ -6,14 +6,11 @@ import Col from 'react-bootstrap/Col';
 
 /* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 export default () => (
-  <header className="App-header">
-    <Row>
+  <header >
+    <Row style={{height: 100+'vh', padding: 10+'vh'}}>
       <Col className="pageTitle">
-        <h1>404</h1>
+        <h1 style={{marginTop: 30+'vh'}}>404</h1>
         <p className="slogan">Oops, that shouldn't have happened. The page you were looking for couldn't be found.</p>
-        <br/>
-        <br/>
-        <br/>
       </Col>
     </Row>
   </header>

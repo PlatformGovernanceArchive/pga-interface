@@ -23,7 +23,7 @@ class About extends React.Component{
 
     render() {
         return(
-            <main className="intro">
+            <main className="pageContent">
                 <Container>
                     <section id="about">
                         <Row>

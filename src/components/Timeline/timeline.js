@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
 import HorizontalTimeline from 'react-horizontal-timeline';
+import Moment from 'moment';
 
 // Import Bootstrap
 import Row from 'react-bootstrap/Row';
@@ -85,6 +86,8 @@ class Timeline extends React.Component {
                     foreground: '#206D86',
                     outline: '#dfdfdf'
                   }}
+                  isOpenBeginning="true"
+                  getLabel={(date) => (Moment(date).format("DD MMM YYYY"))}
                 />
               </Col>
             </Row>

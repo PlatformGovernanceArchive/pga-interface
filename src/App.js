@@ -30,6 +30,7 @@ import backgroundHome from "./assets/img/background-home.png";
 import euLogo from "./assets/img/EUlog_funding.png";
 import about from "./pages/about";
 import Research from "./pages/research";
+import Error404 from "./pages/404";
 
 const appClassName = "App darkTheme"
 
@@ -47,24 +48,6 @@ const PickPolicy = ({ match }) => {
       <PolicyOverview />
     </div>
   )
-}
-
-const AboutPage = ({ match }) => {
-  return(
-      <div className={appClassName}>
-        <Navigation />
-        <About />
-      </div>
-  )
-}
-
-const DataAndResearch = ({ match }) => {
-    return(
-        <div className={appClassName}>
-            <Navigation />
-            <Research />
-        </div>
-    )
 }
 
 const setDate = (platform, type, date, context) => {
@@ -136,16 +119,16 @@ const DocumentView = ({ match }) => {
 
 const Page = ({ match }) => {
   const components = {
-//    about: About,
-//    resources: Resources,
+    about: About,
+    research: Research,
 //    terms: Terms,
 //    framework: Framework,
-//    404: Error404
+    404: Error404
   }
   const CurrentPage = components[match.params.page] || components['404'];
 
   return(
-    <div className={`${appClassName} ${match.params.page}`}>
+    <div className={`${appClassName} page ${match.params.page}`}>
       <Navigation  page={match.params.page} />
       <CurrentPage />
     </div>
@@ -179,8 +162,6 @@ class App extends React.Component {
             <Route path="/view/:platformSlug/:typeSlug/:dateStamp" component={DocumentView} />
             <Route path="/view/:platformSlug/:typeSlug" component={DocumentView} />
             <Route path="/explore" component={PickPolicy} />
-            <Route path="/about" component={AboutPage} />
-            <Route path="/research" component={DataAndResearch} />
             <Route path="/:page" component={Page} />
             <Route exact={true} path="/" component={Home} />
           </Switch>

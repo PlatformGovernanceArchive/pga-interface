@@ -6,6 +6,8 @@ import ReactMarkdown from 'react-markdown';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Nav from 'react-bootstrap/Nav';
+
 
 // Importing Components
 import * as Strings from '../constants';
@@ -32,9 +34,6 @@ class Intro extends React.Component{
                   source={Strings.Intro_About_Text}
                   renderers={this.renderers}
                 />
-                <Link to={`/about`}>
-                  <button className="explore">{Strings.Intro_About_Button}</button>
-                </Link>
               </Col>
             </Row>
           </section>
@@ -48,9 +47,6 @@ class Intro extends React.Component{
                   source={Strings.Intro_DataPaper_Text}
                   renderers={this.renderers}
                 />
-                <Link to={`/research`}>
-                <button>{Strings.Intro_DataPaper_Button}</button>
-                </Link>
               </Col>
             </Row>
           </section>
@@ -67,6 +63,21 @@ class Intro extends React.Component{
                 <Link to={`/explore`}>
                   <button className="explore">{Strings.Intro_Explore}</button>
                 </Link>
+              </Col>
+            </Row>
+          </section>
+           <section id="footer">
+            <Row>
+              <Col sm="4" className="colTitle">
+                <Nav className="flex-column">
+                  <Nav.Item><Link to="/about">About the archive</Link></Nav.Item>
+                  <Nav.Item><Link to="/research">Data and Research</Link></Nav.Item>
+                  <Nav.Item><a href="https://www.hiig.de/en/imprint/">Imprint</a></Nav.Item>
+                  <Nav.Item><a href="https://www.hiig.de/en/data-protection-policy/">Data Protection Policy</a></Nav.Item>
+                </Nav>
+              </Col>
+
+              <Col className="colContent">
               </Col>
             </Row>
           </section>

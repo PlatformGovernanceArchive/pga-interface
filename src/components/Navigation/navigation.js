@@ -8,7 +8,6 @@ import "react-sliding-pane/dist/react-sliding-pane.css";
 // Importing bootstrap
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import NavItem from 'react-bootstrap/Nav';
 
 // Importing Components
 import Logotype from '../logotype'
@@ -46,7 +45,7 @@ class TopNavigation extends React.Component {
           }}
         >
           <Nav className="flex-column">
-            <Nav.Item><Link to="/explore">Explore Policies</Link></Nav.Item>
+            <Nav.Item><Link to="/explore">Explore all policies</Link></Nav.Item>
 
             <Nav.Item className="divider" />
 
@@ -54,8 +53,6 @@ class TopNavigation extends React.Component {
               <Nav.Item><Link to="/research">Data and Research</Link></Nav.Item>
               <Nav.Item className="divider" />
               <Nav.Item><a href="https://www.hiig.de/en/project/platform-governance-and-copyright/">Visit project website</a></Nav.Item>
-
-              <Nav.Item className="divider" />
               <Nav.Item><a href="https://www.hiig.de/en/imprint/">Imprint</a></Nav.Item>
               <Nav.Item><a href="https://www.hiig.de/en/data-protection-policy/">Data Protection Policy</a></Nav.Item>
           </Nav>
