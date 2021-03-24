@@ -1,7 +1,7 @@
-import React, {lazy} from 'react';
+import React from 'react';
 
 // Import static files
-const platformData = lazy(()=> import("../data/platforms.json'"));
+import platformData from '../data/platforms.json';
 
 //API data
 //const PLATFORMS_URL = "https://pgarchive-307718.nw.r.appspot.com/platforms";
