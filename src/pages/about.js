@@ -35,13 +35,6 @@ class About extends React.Component{
                                     source={Strings.About_Intro_One}
                                     renderers={this.renderers}
                                 />
-                                <Link
-                                    className="more"
-                                    smooth={true}
-                                    offset={-20}
-                                    to="research">
-                                    <button >{Strings.About_Intro_Button}</button>
-                                </Link>
                             </Col>
                         </Row>
                     <p/>
