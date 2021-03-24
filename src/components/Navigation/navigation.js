@@ -50,12 +50,14 @@ class TopNavigation extends React.Component {
 
             <Nav.Item className="divider" />
 
-            <Nav.Item>About the archive</Nav.Item>
-            <Nav.Item>Data paper</Nav.Item>
+            <Nav.Item><Link to="/about">About the archive</Link></Nav.Item>
+              <Nav.Item><Link to="/research">Data and Research</Link></Nav.Item>
+              <Nav.Item className="divider" />
+              <Nav.Item><a href="https://www.hiig.de/en/project/platform-governance-and-copyright/">Visit project website</a></Nav.Item>
 
-            <Nav.Item className="divider" />
-
-            <Nav.Item>Visit project website</Nav.Item>
+              <Nav.Item className="divider" />
+              <Nav.Item><a href="https://www.hiig.de/en/imprint/">Imprint</a></Nav.Item>
+              <Nav.Item><a href="https://www.hiig.de/en/data-protection-policy/">Data Protection Policy</a></Nav.Item>
           </Nav>
 
         </SlidingPane>
