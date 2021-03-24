@@ -129,7 +129,7 @@ export class DataProvider extends React.Component {
   }
 
   componentDidMount() {
-    this.getDataFromSrcFile();
+    this.getDataFromPublicFile();
   }
 
 
