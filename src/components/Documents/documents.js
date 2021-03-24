@@ -20,6 +20,7 @@ class Documents extends React.Component {
     const selectedPlatformDiff = selectedType.diffchecks;
 
     return(
+
       <Fragment>
         {selectedPlatformDiff.map((d, ii) => (
           <Document documents={d} key={ii} date={this.props.date} />

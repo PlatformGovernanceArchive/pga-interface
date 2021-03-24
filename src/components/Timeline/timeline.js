@@ -79,7 +79,7 @@ class Timeline extends React.Component {
                     this.setState({ [`value_${key}`]: index, previous: this.state[`value_${key}`] });
                     this.actionOnDateClick(policy.slug, index);
                   }}
-                  values={policy.dates.map(d => (this.transformDate(d)))}
+                  values={policy.dates.map(d => (d))}
                   styles={{
                     background: '#08131e',
                     foreground: '#206D86',

@@ -22,6 +22,8 @@
     "react-helmet": "^6.1.0",
     "react-horizontal-timeline": "^1.5.3",
     "react-interactive-timeline": "^0.3.0",
+    "react-lazy-load": "^3.1.13",
+    "react-lazyload": "^3.2.0",
     "react-markdown": "^5.0.3",
     "react-rich-diff": "^0.6.1",
     "react-router-dom": "^5.2.0",

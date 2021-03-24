@@ -1,6 +1,7 @@
 import React from 'react';
 import Moment from 'moment';
 import ReactDiffViewer, {DiffMethod} from 'react-diff-viewer';
+import LazyLoad from 'react-lazy-load';
 
 // Importing bootstrap
 import Row from 'react-bootstrap/Row';
@@ -44,13 +45,17 @@ class Document extends React.Component {
     return (
       <Row key={this.props.key} ref={this.myRef}>
         <Col>
+
           <h3>
-            <span className="dateOld">{Moment(this.transformDate(d.dateOld)).format("DD MMMM YYYY")}</span>
-            <span className="dateOld"> {Moment(this.transformDate(d.dateNew)).format("DD MMMM YYYY")}</span>
+            <span className="dateOld">{Moment(d.dateOld).format("DD MMMM YYYY")}</span>
+            <span className="dateOld"> {Moment(d.dateNew).format("DD MMMM YYYY")}</span>
           </h3>
+          <LazyLoad offsetBottom={100}>
           <ReactDiffViewer oldValue={d.mdOld} newValue={d.mdNew} splitView={true} useDarkTheme={true} compareMethod={DiffMethod.WORDS}/>
+          </LazyLoad>
         </Col>
       </Row>
+
     )
   }
 
