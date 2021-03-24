@@ -28,26 +28,7 @@ class Research extends React.Component{
                             </Col>
                             <Col className="colContent">
                                 <ReactMarkdown
-                                    source={Strings.About_Intro_One}
-                                    renderers={this.renderers}
-                                />
-                                <Link
-                                    className="more"
-                                    smooth={true}
-                                    offset={-20}
-                                    to="research">
-                                    <button >{Strings.About_Intro_Button}</button>
-                                </Link>
-                            </Col>
-                        </Row>
-                    <p/>
-                    <p/>
-                        <Row>
-                            <Col sm="4" className="colTitle">
-                            </Col>
-                            <Col>
-                                <ReactMarkdown
-                                    source={Strings.About_Intro_Two}
+                                    source={Strings.DataAndResearch_Intro_Text}
                                     renderers={this.renderers}
                                 />
                             </Col>
@@ -56,7 +37,52 @@ class Research extends React.Component{
                     <section>
                         <Row>
                             <Col  sm="4" className="colTitle">
-                                <h2>{Strings.DataAndResearch_Intro_Headline}</h2>
+                                <h2>{Strings.DataAndResearch_DataPaper_Headline}</h2>
+                            </Col>
+                            <Col className="colContent">
+                                <ReactMarkdown
+                                    source={Strings.DataAndResearch_DataPaper_Text}
+                                    renderers={this.renderers}
+                                />
+                            </Col>
+                        </Row>
+                    </section>
+                    <section>
+                        <Row>
+                            <Col  sm="4" className="colTitle">
+                                <h2>{Strings.DataAndResearch_DataAccess_Headline}</h2>
+                            </Col>
+                            <Col className="colContent">
+                                <ReactMarkdown
+                                    source={Strings.DataAndResearch_DataAccess_Text}
+                                    renderers={this.renderers}
+                                />
+                            </Col>
+                        </Row>
+                    </section>
+                    <section>
+                        <Row>
+                            <Col  sm="4" className="colTitle">
+                                <h2>{Strings.DataAndResearch_Research_Headline}</h2>
+                            </Col>
+                            <Col className="colContent">
+                                <ReactMarkdown
+                                    source={Strings.DataAndResearch_Research_Text}
+                                    renderers={this.renderers}
+                                />
+                            </Col>
+                        </Row>
+                    </section>
+                    <section>
+                        <Row>
+                            <Col  sm="4" className="colTitle">
+                                <h2>{Strings.DataAndResearch_Outlook_Headline}</h2>
+                            </Col>
+                            <Col className="colContent">
+                                <ReactMarkdown
+                                    source={Strings.DataAndResearch_Outlook_Text}
+                                    renderers={this.renderers}
+                                />
                             </Col>
                         </Row>
                     </section>
