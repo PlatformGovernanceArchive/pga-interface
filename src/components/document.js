@@ -41,14 +41,18 @@ class Document extends React.Component {
 
   render() {
     const d=this.props.documents
-
+    let dateOld = Moment(d.dateOld).format("DD MMMM YYYY")
+    let dateNew = Moment(d.dateNew).format("DD MMMM YYYY")
+    if (dateOld === dateNew){
+      dateOld="";
+    }
     return (
       <Row key={this.props.key} ref={this.myRef}>
         <Col>
 
           <h3>
-            <span className="dateOld">{Moment(d.dateOld).format("DD MMMM YYYY")}</span>
-            <span className="dateOld"> {Moment(d.dateNew).format("DD MMMM YYYY")}</span>
+            <span className="dateOld">{dateOld}</span>
+            <span className="dateOld"> {dateNew}</span>
           </h3>
           <LazyLoad offsetBottom={100}>
           <ReactDiffViewer oldValue={d.mdOld} newValue={d.mdNew} splitView={true} useDarkTheme={true} compareMethod={DiffMethod.WORDS}/>
