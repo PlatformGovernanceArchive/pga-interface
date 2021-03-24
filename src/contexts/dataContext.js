@@ -94,14 +94,12 @@ export class DataProvider extends React.Component {
     })
   }
 
-   getDataFromSrcFile = async () => {
-
-    const data = await platformData
+   getDataFromSrcFile = () => {
 
 //    console.log('file:', platformData)
 
     this.setState({
-        platforms: data,
+        platforms: platformData,
         status: 'data loaded from file'
     })
   }
@@ -130,8 +128,8 @@ export class DataProvider extends React.Component {
 //    console.log('status in dataContext: ', this.state.status)
   }
 
-  componentDidMount() {
-    this.getDataFromSrcFile();
+  async componentDidMount() {
+    await this.getDataFromSrcFile();
   }
 
 
