@@ -94,12 +94,14 @@ export class DataProvider extends React.Component {
     })
   }
 
-  getDataFromSrcFile = () => {
+   getDataFromSrcFile = async () => {
+
+    const data = await platformData
 
 //    console.log('file:', platformData)
 
     this.setState({
-        platforms: platformData,
+        platforms: data,
         status: 'data loaded from file'
     })
   }
