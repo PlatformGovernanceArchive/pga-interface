@@ -692,7 +692,8 @@ ul{
                 .col:first-child{
                     display: flex;
                     flex-direction: column;
-                    flex: content 0 0;
+                    flex: 0;
+                    min-width: 200px;
 
                     h3{
                         @include uppercase;
