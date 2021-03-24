@@ -22,7 +22,7 @@ class Documents extends React.Component {
     return(
 
       <Fragment>
-        {selectedPlatformDiff.map((d, ii) => (
+        {selectedPlatformDiff.reverse().map((d, ii) => (
           <Document documents={d} key={ii} date={this.props.date} />
         ))}
       </Fragment>

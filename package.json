@@ -9,6 +9,8 @@
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.6.0",
     "d3": "^6.5.0",
+    "import-lazy": "^4.0.0",
+    "local-storage": "^2.0.0",
     "markdown": "^0.5.0",
     "markup-it": "^12.1.1",
     "moment": "^2.29.1",
