@@ -6,19 +6,19 @@ export const ProceedToOtherPhase = 'Proceed to another phase';
 
 // Home
 // Hero
-export const Hero_Quote = '“The way platforms govern user activities has tremendous consequences for how our increasingly digital society is organised. This archive enables citizens, researchers and journalists alike to understand how this governance by platforms has changed over time.”';
+export const Hero_Quote = 'The way platforms govern user activities has tremendous consequences for how our increasingly digital society is organised. This archive enables citizens, researchers and journalists alike to understand how this governance by platforms has changed over time.';
 export const Hero_Typing = 'An archive of  key policy documents by';
 export const Hero_LearnMore = 'Learn more';
 // Intro
 export const Intro_About_Headline = 'About this project';
 export const Intro_About_Text = `The Platform Governance Archive (PGA) is a project to facilitate critical engagement with the way platforms order and govern our communication and activities. It offers an interactive exploration of some major platforms’ set of rules, as well as access to a curated and structured database containing key policies of the platforms’ full lifetime.
 
-[Learn more about the team and the project](/about)`;
+[Learn more about the Team and the Project](/about)`;
 export const Intro_About_Button = 'Learn more about the team and the project';
 export const Intro_DataPaper_Headline = 'Data Access And Research';
 export const Intro_DataPaper_Text = `Data for this project has been collected by a combination of automated and manual approaches. For the historical data, the process builds mostly on the Internet Archive’s Wayback Machine. We have collected data for ten major platforms and four different document types (terms of service, community guidelines, privacy policies, copyright policies). With this first release, we are starting with Facebook, YouTube, Twitter and Instagram – and will extend this collection in the weeks and months ahead.
 
-[Learn more about data and research](/research)`;
+[Learn more about Data and Research](/research)`;
 export const Intro_DataPaper_Button = 'Learn more about data and research';
 export const Intro_Contribute_Headline = 'How to contribute and cite';
 export const Intro_Contribute_Text = `When you use the Platform Governance Archive in your research or reporting, please refer to us along these lines: 
@@ -30,7 +30,7 @@ We will develop and extend the archive in the upcoming months. If you have any s
 export const Intro_Explore = 'Explore the archive';
 
 // Policy overview
-export const PolicyOverview_Tagline = 'Select platform and type of policy to explore their development over time.';
+export const PolicyOverview_Tagline = 'Select a platform and policy type to explore their development over time.';
 
 
 
@@ -51,6 +51,7 @@ export const Meta_Description = 'The Platform Governance Archive (PGA) is a stru
 export const About_Intro_One = `The Platform Governance Archive (PGA) is a project to facilitate critical engagement with the way platforms order and govern our communication and activities. It offers an interactive exploration of major platforms’ set of rules, as well as access to a curated and structured database containing the key policies of the platforms’ full life-time. While public debates over e.g. the handling of misinformation and hate speech by major platforms have long reached mainstream audiences and policymakers, there is little accessible material to rigorously study the short- and long-term developments of companies’ internal policies. The PGA team at the Alexander von Humboldt Institute for Internet and Society has collected and curated a vast collection of thousands of these documents, ranging from Terms of Service (ToS) to Community Guidelines.
 
 The PGA proudly joins the ranks of a set of similarly spirited initiatives such as the  [*Princeton-Leuven Longitudinal Corpus of Privacy Policies*](https://privacypolicies.cs.princeton.edu//) and the [*Open Terms Archive*](https://disinfo.quaidorsay.fr/en/open-terms-archive). What sets the PGA apart from these projects are 1) our focus on substantial content policies of platforms (that is, we include not only the legalistic terms of service and privacy policies, but also the much more substantial community guidelines) and 2) a combination of automated and manual collection processes that has allowed us to identify when exactly actual changes to the policies occurred.  
+
 [**Learn more about Data and Research**](/research)`;
 
 export const About_Intro_Button = ``;

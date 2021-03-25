@@ -19,9 +19,9 @@ class Research extends React.Component{
 
     render() {
         return(
-            <main className="intro">
+            <main className="pageContent">
                 <Container>
-                    <section id="about">
+                    <section id="research">
                         <Row>
                             <Col sm="4" className="colTitle">
                                 <h2>{Strings.DataAndResearch_Intro_Headline}</h2>
