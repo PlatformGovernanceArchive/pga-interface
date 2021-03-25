@@ -23,17 +23,15 @@ import PolicyOverview from './components/PolicyOverview';
 import ScrollToTop from './components/scrollToTop';
 import * as Strings from './constants';
 import { DataContext } from './contexts/dataContext'
-import About from "./pages/about";
 
 // Importing pages
-import about from "./pages/about";
+import About from "./pages/about";
 import Research from "./pages/research";
 import Error404 from "./pages/404";
 
 
 // Importing background images
 import backgroundHome from "./assets/img/background-home.png";
-import euLogo from "./assets/img/EUlog_funding.png";
 
 const appClassName = "App darkTheme"
 
@@ -167,7 +165,7 @@ class App extends React.Component {
           </DataContext.Consumer>
           */}
 
-          <Suspense fallback={<div>Page is Loading...</div>}>
+          <Suspense fallback={<div style={{height: 100+'vh'}}>Page is Loading...</div>}>
             <Switch>
               <Route path="/view/:platformSlug/:typeSlug/:dateStamp" component={DocumentView} />
               <Route path="/view/:platformSlug/:typeSlug" component={DocumentView} />

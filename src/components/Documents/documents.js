@@ -52,7 +52,6 @@ class Documents extends React.Component {
       return(
         <Row className="loading documents">
             <Col>
-                <h1>Document viewer</h1>
                 <p>Loading data</p>
             </Col>
         </Row>
