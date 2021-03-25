@@ -8,10 +8,12 @@ class Logotype extends React.Component{
     let tagName = (this.props.tag === undefined) ?  'span' : this.props.tag;
     const Tag = `${tagName}`
     return(
-      <Tag className="logotype">
-        Platform Governance Archive
-        <span className="version">{version}</span>
-      </Tag>
+      <Link to="/">
+        <Tag className="logotype">
+          Platform Governance Archive
+          <span className="version">{version}</span>
+        </Tag>
+      </Link>
     )
   }
 }

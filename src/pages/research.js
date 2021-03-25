@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // Importing bootstrap
 import Row from 'react-bootstrap/Row';
@@ -6,7 +6,6 @@ import Col from 'react-bootstrap/Col';
 import Container from "react-bootstrap/Container";
 import * as Strings from "../constants";
 import ReactMarkdown from "react-markdown";
-import {Link} from "react-router-dom";
 
 /* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 class Research extends React.Component{
