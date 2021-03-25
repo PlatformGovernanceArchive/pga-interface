@@ -54,7 +54,7 @@ class Document extends React.Component {
             <span className="dateOld">{dateOld}</span>
             <span className="dateOld"> {dateNew}</span>
           </h3>
-          <LazyLoad offsetBottom={100} height={750}>
+          <LazyLoad offsetBottom={100}>
           <ReactDiffViewer oldValue={d.mdOld} newValue={d.mdNew} splitView={true} useDarkTheme={true} compareMethod={DiffMethod.WORDS}/>
           </LazyLoad>
         </Col>
