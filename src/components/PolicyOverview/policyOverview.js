@@ -9,12 +9,12 @@ import Col from 'react-bootstrap/Col';
 
 // Importing Components
 import {PolicyOverview_Tagline} from '../../constants';
-
+import platforms from '../../data/platforms_overview.json';
 class PolicyOverview extends React.Component{
 
   render () {
 
-    const platforms = this.props.platforms
+    //const platforms = this.props.platforms
 //    console.log('Platforms', platforms)
 
     const platformOutput = platforms.map((p,i) => {
