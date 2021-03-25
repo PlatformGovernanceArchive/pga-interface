@@ -48,22 +48,6 @@ class Document extends React.Component {
     }
 
     // with lazy
-//    return (
-//      <Row key={this.props.key} ref={this.myRef}>
-//        <Col>
-//
-//          <h3>
-//            <span className="dateOld">{dateOld}</span>
-//            <span className="dateOld"> {dateNew}</span>
-//          </h3>
-//          <LazyLoad offsetBottom={100}>
-//            <ReactDiffViewer oldValue={d.mdOld} newValue={d.mdNew} splitView={true} useDarkTheme={true} compareMethod={DiffMethod.WORDS}/>
-//          </LazyLoad>
-//        </Col>
-//      </Row>
-//    )
-
-    // Without lazy
     return (
       <Row key={this.props.key} ref={this.myRef}>
         <Col>
@@ -72,10 +56,26 @@ class Document extends React.Component {
             <span className="dateOld">{dateOld}</span>
             <span className="dateOld"> {dateNew}</span>
           </h3>
+          <LazyLoad offsetBottom={100}>
             <ReactDiffViewer oldValue={d.mdOld} newValue={d.mdNew} splitView={true} useDarkTheme={true} compareMethod={DiffMethod.WORDS}/>
+          </LazyLoad>
         </Col>
       </Row>
     )
+
+    // Without lazy
+//    return (
+//      <Row key={this.props.key} ref={this.myRef}>
+//        <Col>
+//
+//          <h3>
+//            <span className="dateOld">{dateOld}</span>
+//            <span className="dateOld"> {dateNew}</span>
+//          </h3>
+//            <ReactDiffViewer oldValue={d.mdOld} newValue={d.mdNew} splitView={true} useDarkTheme={true} compareMethod={DiffMethod.WORDS}/>
+//        </Col>
+//      </Row>
+//    )
   }
 
 }
