@@ -167,7 +167,7 @@ class App extends React.Component {
           </DataContext.Consumer>
           */}
 
-          <Suspense fallback={<div>Page is Loading...</div>}>
+          <Suspense fallback={<div style={{height: 100+'vh'}}>Page is Loading...</div>}>
             <Switch>
               <Route path="/view/:platformSlug/:typeSlug/:dateStamp" component={DocumentView} />
               <Route path="/view/:platformSlug/:typeSlug" component={DocumentView} />
