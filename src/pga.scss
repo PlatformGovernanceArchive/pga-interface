@@ -509,6 +509,10 @@ ul{
     overflow: hidden;
     height: 100vh;
 
+    .LazyLoad{
+        min-height: 60vh;
+    }
+
     .documents{
         flex: 70% 0 0;
         overflow-y: scroll;
