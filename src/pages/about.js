@@ -78,7 +78,7 @@ class About extends React.Component{
                                     source={Strings.About_Funding_Text}
                                     renderers={this.renderers}
                                 />
-                                <div><img width={180} height={90} src={euLogo} alt="Logo" /><img hspace={20} width={130} height={90} src={osLogo_en} alt="Logo" />
+                                <div><img width={250}  src={euLogo} alt="Logo" /><img hspace={20} width={130} height={90} src={osLogo_en} alt="Logo" />
                                     <img width={130} height={90} src={osLogo_de} alt="Logo" /></div>
                             </Col>
                         </Row>
