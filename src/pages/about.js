@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 import * as Strings from "../constants";
 import ReactMarkdown from "react-markdown";
 
-import euLogo from "./../assets/img/EUlog_funding.png";
+import euLogo from "./../assets/img/ReCreating EU_logo_neg.png";
 import osLogo_en from "./../assets/img/openscience_funding_en.png";
 import osLogo_de from "./../assets/img/openscience_funding_de.png";
 
