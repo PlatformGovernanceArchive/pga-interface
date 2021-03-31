@@ -13,17 +13,18 @@ export const Hero_LearnMore = 'Learn more';
 export const Intro_About_Headline = 'About this project';
 export const Intro_About_Text = `The Platform Governance Archive (PGA) is a project to facilitate critical engagement with the way platforms order and govern our communication and activities. It offers an interactive exploration of some major platforms’ set of rules, as well as access to a curated and structured database containing key policies of the platforms’ full lifetime.
 
-[Learn more about the Team and the Project](/about)`;
+[Learn more about the team and the project](/about)`;
 export const Intro_About_Button = 'Learn more about the team and the project';
 export const Intro_DataPaper_Headline = 'Data Access And Research';
 export const Intro_DataPaper_Text = `Data for this project has been collected by a combination of automated and manual approaches. For the historical data, the process builds mostly on the Internet Archive’s Wayback Machine. We have collected data for ten major platforms and four different document types (terms of service, community guidelines, privacy policies, copyright policies). With this first release, we are starting with Facebook, YouTube, Twitter and Instagram – and will extend this collection in the weeks and months ahead.
 
-[Learn more about Data and Research](/research)`;
+[Learn more about data and research](/research)`;
 export const Intro_DataPaper_Button = 'Learn more about data and research';
+
 export const Intro_Contribute_Headline = 'How to contribute and cite';
 export const Intro_Contribute_Text = `When you use the Platform Governance Archive in your research or reporting, please refer to us along these lines: 
 
-Katzenbach, C., Magalhães, J. C., Kopps, A., Sühr, T. & Wunderlich, L. (2021). The Platform Governance Archive. Alexander von Humboldt Institute for Internet and Society. [ *https://doi.org/10.17605/OSF.IO/XSBPT*](https://doi.org/10.17605/OSF.IO/XSBPT)
+Katzenbach, C., Magalhães, J. C., Kopps, A., Sühr, T. & Wunderlich, L. (2021). *The Platform Governance Archive.* Alexander von Humboldt Institute for Internet and Society. [https://doi.org/10.17605/OSF.IO/XSBPT](https://doi.org/10.17605/OSF.IO/XSBPT)
 
 
 We will develop and extend the archive in the upcoming months. If you have any suggestion or feedback don’t hesitate to contact project lead Christian Katzenbach [(katzenbach@hiig.de)](mailto:katzenbach@hiig.de).`;
@@ -31,7 +32,7 @@ export const Intro_Explore = 'Explore the archive';
 
 // Policy overview
 export const PolicyOverview_Tagline = 'Select a platform and policy type to explore their development over time.';
-
+export const PolicyOverview_MobileDisabled = 'The current version of the archive is not optimised for mobile. For now we kindly ask you to use the archive with a desktop.';
 
 
 
