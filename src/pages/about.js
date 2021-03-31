@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // Importing bootstrap
 import Row from 'react-bootstrap/Row';
@@ -6,7 +6,6 @@ import Col from 'react-bootstrap/Col';
 import Container from "react-bootstrap/Container";
 import * as Strings from "../constants";
 import ReactMarkdown from "react-markdown";
-import {Link} from "react-router-dom";
 
 import euLogo from "./../assets/img/EUlog_funding.png";
 import osLogo_en from "./../assets/img/openscience_funding_en.png";

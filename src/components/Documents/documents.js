@@ -22,7 +22,7 @@ class Documents extends React.Component {
     return(
 
       <Fragment>
-        {selectedPlatformDiff.reverse().map((d, ii) => (
+        {selectedPlatformDiff.map((d, ii) => (
           <Document documents={d} key={ii} date={this.props.date} />
         ))}
       </Fragment>
@@ -52,7 +52,6 @@ class Documents extends React.Component {
       return(
         <Row className="loading documents">
             <Col>
-                <h1>Document viewer</h1>
                 <p>Loading data</p>
             </Col>
         </Row>

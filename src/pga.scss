@@ -98,7 +98,7 @@ $break-points: (
     'wide-screen':  1400px
 );
 
-$font-regular: 'PT Sans', monospace;
+$font-regular: 'PT Sans', sans-serif;
 $font-monospace: 'Droid Sans Mono', monospace;
 
 
@@ -414,7 +414,8 @@ ul{
             color: theme-get('copy');
         }
 
-        margin-bottom: 2em
+        margin-bottom: 2em;
+        min-width: 300px;
     }
 
     .nav-item{
@@ -460,12 +461,33 @@ ul{
         flex: auto 0 0;
         text-align: left;
         margin: auto 0;
+
+        @include device(S){
+            display: none;
+        }
+
+    }
+
+    .mobileNotification{
+        @include explanation;
+        flex: auto 0 0;
+        text-align: left;
+        margin: auto 0;
+        display: none;
+
+        @include device(S){
+            display: block;
+        }
     }
 
     .platforms{
         display: flex;
         flex-direction: column;
         flex: auto 0 0;
+
+        @include device(S){
+            display: none;
+        }
 
        .platform{
             display: flex;
@@ -509,6 +531,10 @@ ul{
     overflow: hidden;
     height: 100vh;
 
+    .LazyLoad{
+        min-height: 60vh;
+    }
+
     .documents{
         flex: 70% 0 0;
         overflow-y: scroll;
@@ -537,8 +563,11 @@ ul{
         }
 
         table{
+            @include theme() {
+                border-color: rgba(theme-get('copy'), 0.2);
+            }
 
-            border: 1px solid #fff3;
+            border: 1px solid;
             border-radius: 10px;
             border-collapse: separate;
 
@@ -548,14 +577,26 @@ ul{
 
 
             [class*="code-fold"]{
+
+                height: 80px;
+
                 a{
-                    border-bottom: 2px dotted #fff4;
+                    @include theme() {
+                        border-bottom-color: rgba(theme-get('copy'), 0.4);
+                    }
+                    border-bottom: 2px dotted;
                     text-decoration: none !important;
+
+                    position: relative;
+                    left: 41vw;
                 }
 
                 pre{
+                    @include theme() {
+                        color: rgba(theme-get('copy'), 0.9);
+                    }
+
                     font-weight: 400;
-                    color: #fff9;
                 }
             }
 
@@ -571,7 +612,9 @@ ul{
             }
 
             [class*="diff-removed"]{
-                background: #fff1;
+                 @include theme() {
+                    background: rgba(theme-get('copy'), 0.05);
+                }
             }
 
             [class*="diff-added"]{
@@ -580,7 +623,9 @@ ul{
 
 
             [class*="word-removed"]{
-                background: #fff3;
+                 @include theme() {
+                    background: rgba(theme-get('copy'), 0.2);
+                }
                 text-decoration: line-through;
             }
 
@@ -684,11 +729,19 @@ ul{
             font-weight: 400;
             margin: auto 0;
             flex: auto 0 0;
+
+            @include device(S){
+                display: none;
+            }
         }
 
         h1{
             margin-left: auto;
             font-size: size('title');
+
+            @include device(S){
+                margin-top: 4em;
+            }
         }
 
         .subtitle{

@@ -167,7 +167,6 @@ class Timeline extends React.Component {
       return(
         <Row className="loading timelines">
           <Col>
-            <h1>Timeline</h1>
             <p>Loading data</p>
           </Col>
         </Row>

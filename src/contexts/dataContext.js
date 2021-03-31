@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Import static files
- import platformData from '../data/platforms.json';
+import platformData from '../data/platforms.json';
 
 //API data
 //const PLATFORMS_URL = "https://pgarchive-307718.nw.r.appspot.com/platforms";
@@ -106,7 +106,7 @@ export class DataProvider extends React.Component {
 
   getDataFromPublicFile = () => {
     this.setState({status: 'loadingData'})
-    fetch('platforms.json'
+    fetch('/platforms.json'
         ,{
           headers : {
             'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ export class DataProvider extends React.Component {
   }
 
   componentDidMount() {
-    this.getDataFromSrcFile();
+    this.getDataFromPublicFile();
   }
 
 

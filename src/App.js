@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { useHistory } from 'react-router-dom';
-
-// Importing dependencies
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {Helmet} from 'react-helmet';
 
@@ -18,37 +16,27 @@ import Container from 'react-bootstrap/Container';
 import Hero from './components/hero'
 import Intro from './components/intro'
 import Navigation from './components/Navigation';
-import Documents from './components/Documents';
-import Timeline from './components/Timeline';
+//import Documents from './components/Documents';
+//import Timeline from './components/Timeline';
 import PolicyOverview from './components/PolicyOverview';
+
 import ScrollToTop from './components/scrollToTop';
 import * as Strings from './constants';
 import { DataContext } from './contexts/dataContext'
+
+// Importing pages
 import About from "./pages/about";
-// Importing background images
-import backgroundHome from "./assets/img/background-home.png";
-import euLogo from "./assets/img/EUlog_funding.png";
-import about from "./pages/about";
 import Research from "./pages/research";
 import Error404 from "./pages/404";
 
+
+// Importing background images
+import backgroundHome from "./assets/img/background-home.png";
+
 const appClassName = "App darkTheme"
 
-const Home = () => (
-  <div className={`${appClassName} home`} style={{backgroundImage: 'url('+backgroundHome+')'}}>
-    <Hero />
-    <Intro />
-  </div>
-)
-
-const PickPolicy = ({ match }) => {
-  return(
-    <div className={`${appClassName} pick`}>
-      <Navigation />
-      <PolicyOverview />
-    </div>
-  )
-}
+const Documents = lazy(() => import('./components/Documents'));
+const Timeline = lazy(() => import('./components/Timeline'));
 
 const setDate = (platform, type, date, context) => {
 
@@ -81,6 +69,25 @@ const setDate = (platform, type, date, context) => {
     return '20200101'
   }
 
+}
+
+
+// Switch components
+
+const Home = () => (
+  <div className={`${appClassName} home`} style={{backgroundImage: 'url('+backgroundHome+')'}}>
+    <Hero />
+    <Intro />
+  </div>
+)
+
+const PickPolicy = ({ match }) => {
+  return(
+    <div className={`${appClassName} pick`}>
+      <Navigation />
+      <PolicyOverview />
+    </div>
+  )
 }
 
 const DocumentView = ({ match }) => {
@@ -158,13 +165,17 @@ class App extends React.Component {
           </DataContext.Consumer>
           */}
 
-          <Switch>
-            <Route path="/view/:platformSlug/:typeSlug/:dateStamp" component={DocumentView} />
-            <Route path="/view/:platformSlug/:typeSlug" component={DocumentView} />
-            <Route path="/explore" component={PickPolicy} />
-            <Route path="/:page" component={Page} />
-            <Route exact={true} path="/" component={Home} />
-          </Switch>
+          <Suspense fallback={<div style={{height: 100+'vh'}}>Page is Loading...</div>}>
+            <Switch>
+              <Route path="/view/:platformSlug/:typeSlug/:dateStamp" component={DocumentView} />
+              <Route path="/view/:platformSlug/:typeSlug" component={DocumentView} />
+              <Route path="/explore" component={PickPolicy} />
+              <Route path="/:page" component={Page} />
+              <Route exact={true} path="/" component={Home} />
+            </Switch>
+          </Suspense>
+
+
 
         </ScrollToTop>
       </Router>
