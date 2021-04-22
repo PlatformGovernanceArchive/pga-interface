@@ -420,7 +420,7 @@ ul{
 
     .nav-item{
         @include uppercase;
-        margin-bottom: 1em;
+            margin-bottom: 1em;
 
         &.divider{
             height: 1em;
