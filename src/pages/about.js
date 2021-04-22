@@ -79,8 +79,8 @@ class About extends React.Component{
                                     renderers={this.renderers}
                                 />
                                 <div><img width={250}  src={euLogo} alt="Logo" /><img hspace={20} width={130} height={90} src={osLogo_en} alt="Logo" />
-                                    <img width={130} height={90} src={osLogo_de} alt="Logo" /></div>
-                            </Col>
+                              </div>
+                          </Col>
                         </Row>
                     </section>
                 </Container>
