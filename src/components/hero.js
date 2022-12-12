@@ -27,13 +27,11 @@ export default () => (
             eraseDelay="2000"
             typingDelay="500"
             text={[
-              "Facebook",
-              "YouTube",
-              "Twitter",
-              "Instagram",
-              "SoundCloud",
-              "Vimeo",
-              "Pornhub"
+              "AI serving equality.",
+              "Making knowledge equally accessible.",
+              "A new digital commons.",
+              "AI in the power of people.",
+              "AI systems, which are open for validation.",
             ]}
             displayTextRenderer={(text, i) => {
               return (

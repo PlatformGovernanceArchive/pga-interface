@@ -67,12 +67,13 @@ class Timeline extends React.Component {
               </Col>
               <Col className="horizontalTimeline">
                 {
-//                  console.log(
-//                    'dates:',
-//                    policy.dates,
-//                    policy.dates.map(d => (this.transformDate(d))),
-//                    this.state[`value_${key}`]
-//                  )
+                 console.log(
+                   'dates:',
+                   policy.dates,
+                   policy.dates.map(d => (this.transformDate(d))),
+                   policy.dates,
+                   this.state[`value_${key}`]
+                 )
                 }
                 <HorizontalTimeline
                   index={this.state[`value_${key}`]}
@@ -80,7 +81,7 @@ class Timeline extends React.Component {
                     this.setState({ [`value_${key}`]: index, previous: this.state[`value_${key}`] });
                     this.actionOnDateClick(policy.slug, index);
                   }}
-                  values={policy.dates.map(d => (d))}
+                  values={policy.dates.map(d => (this.transformDate(d)))}
                   styles={{
                     background: '#08131e',
                     foreground: '#206D86',
@@ -88,6 +89,7 @@ class Timeline extends React.Component {
                   }}
                   isOpenBeginning="true"
                   getLabel={(date) => (Moment(date).format("DD MMM YYYY"))}
+                  // minEventPadding="100"
                 />
               </Col>
             </Row>
