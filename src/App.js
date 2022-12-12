@@ -27,6 +27,7 @@ import { DataContext } from './contexts/dataContext'
 // Importing pages
 import About from "./pages/about";
 import Research from "./pages/research";
+import Ticker from "./pages/ticker"
 import Error404 from "./pages/404";
 
 
@@ -128,6 +129,7 @@ const Page = ({ match }) => {
   const components = {
     about: About,
     research: Research,
+    ticker: Ticker,
 //    terms: Terms,
 //    framework: Framework,
     404: Error404
@@ -135,7 +137,7 @@ const Page = ({ match }) => {
   const CurrentPage = components[match.params.page] || components['404'];
 
   return(
-    <div className={`${appClassName} page ${match.params.page}`}>
+    <div className={`${appClassName}  page ${match.params.page}`}>
       <Navigation  page={match.params.page} />
       <CurrentPage />
     </div>
