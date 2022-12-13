@@ -14,7 +14,7 @@
 // Functions
 // ==============================
 
-//Retrieve panke color from variables
+//Retrieve color from variables
 @function hiig($key: 'steel') {
     @return map-get($hiig-colors, $key);
 }
@@ -784,6 +784,11 @@ ul{
         margin-bottom: 2em;
     }
 
+    h4{
+        font-size: size('copy');
+        margin-bottom: 2em;
+    }
+
     p{
         font-size: size('copy-big')
     }
@@ -822,6 +827,55 @@ ul{
 // Pages
 .pageContent{
     padding-top: 10vh;
+}
+
+.tickerSection{
+
+    font-family: 'Droid Sans Mono', monospace;
+
+    .row{
+        margin-bottom: 80px;
+    }
+
+    .colTitle{
+        h2{
+            font-size: 11pt;
+
+            i{
+                display: inline-block;
+                margin-left: 20px;
+                font-style: normal;
+                font-weight: 300;
+                padding: 5px 10px;
+                margin-top: -5px;
+                font-size: 12px;
+                border: 2px solid transparent;
+                
+
+                svg{
+                    color: white;
+                    transform: rotate(-30deg) translateY(-5px);
+                }
+            }
+
+            &:hover i{
+
+                border: 2px solid rgba(255,255,255,0.5);
+                border-radius: 2px;
+
+                &:before{
+                    content:"Copy link ";
+                    font-family: "PT Sans", sans-serif;
+                    font-size: 12px;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    .colContent{
+        font-size: 0.85em;
+    }
 }
 
 

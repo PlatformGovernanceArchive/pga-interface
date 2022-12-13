@@ -103,3 +103,10 @@ export const DataAndResearch_Research_Text = `We use the Platform Governance Arc
 
 export const DataAndResearch_Outlook_Headline = `The Road Ahead`;
 export const DataAndResearch_Outlook_Text = `This early launch marks only the beginning of a long journey. In the next months, we will publish the dataset for re-use and a data paper for documentation. After that, we plan to start a second phase of the PGA that thrives to both extend the archive in terms of scope and language as well as to install a sustainable process and organization for updating the data archive continuously.`;
+
+// Update ticker
+
+export const Intro_Ticker_Headline = `Platform updates ticker`
+export const Intro_Ticker_Text = `We will post regular updates and short comments on changes, that platforms undertake on their policy documents.
+
+Tellus in metus vulputate eu. Massa placerat duis ultricies lacus sed turpis tincidunt id. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Tincidunt vitae semper quis lectus nulla at volutpat diam. Egestas sed tempus urna et pharetra. Nunc lobortis mattis aliquam faucibus purus in massa tempor. Porttitor leo a diam sollicitudin tempor id.`
