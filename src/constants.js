@@ -111,4 +111,4 @@ export const DataAndResearch_Outlook_Text = `This early launch marks only the be
 export const Intro_Ticker_Headline = `PGA Update Ticker`
 export const Intro_Ticker_Text = `The PGA Update Ticker provides regular updates and explanations on changes in platform policies. We are continuously monitoring changes in the platform policies that we cover, and writing short notes here to expose and explain these changes.
 
-Tellus in metus vulputate eu. Massa placerat duis ultricies lacus sed turpis tincidunt id. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Tincidunt vitae semper quis lectus nulla at volutpat diam. Egestas sed tempus urna et pharetra. Nunc lobortis mattis aliquam faucibus purus in massa tempor. Porttitor leo a diam sollicitudin tempor id.`
+Our overage here is not comprehensive, and it only starts in mid-2022. So don't expect to find all interesting changes here – you need to explore yourself or consult our Research page.`
