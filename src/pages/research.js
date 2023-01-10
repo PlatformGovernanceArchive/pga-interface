@@ -26,11 +26,11 @@ class Research extends React.Component {
           <section id="research">
             <Row>
               <Col sm="4" className="colTitle">
-                <h2>{Strings.DataAndResearch_Intro_Headline}</h2>
+                <h2>{Strings.Data_DataAccess_Headline}</h2>
               </Col>
               <Col className="colContent">
                 <ReactMarkdown
-                  source={Strings.DataAndResearch_Intro_Text}
+                  source={Strings.DataAndResearch_DataAccess_Text}
                   renderers={this.renderers}
                 />
               </Col>
