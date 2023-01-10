@@ -111,4 +111,4 @@ export const DataAndResearch_Outlook_Text = `This early launch marks only the be
 export const Intro_Ticker_Headline = `PGA Update Ticker`
 export const Intro_Ticker_Text = `The PGA Update Ticker provides regular updates and explanations on changes in platform policies. We are continuously monitoring changes in the platform policies that we cover, and writing short notes here to expose and explain these changes.
 
-Our overage here is not comprehensive, and it only starts in mid-2022. So don't expect to find all interesting changes here – you need to explore yourself or consult our Research page.`
+Our coverage here is not comprehensive, and it only starts in mid-2022. So don't expect to find all interesting changes here – you need to explore yourself or consult our Research page.`
