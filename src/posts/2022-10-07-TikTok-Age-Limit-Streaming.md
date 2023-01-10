@@ -6,7 +6,7 @@ slug: 2022-10-07-TikTok-Age-Limit-Streaming
 ---
 
 
-# TikTok raises the age limit for hosting a live stream from 16 to 18**
+# TikTok raises the age limit for hosting a live stream from 16 to 18
 
 TikTok [introduced](https://github.com/OpenTermsArchive/pga-versions/commit/6d1406cb8d73b34ff3f1281a04955ea93a097aa6) an update regarding the live stream policies to its community guidelines. **According to the update, the age limit for hosting a live stream is raised from 16 to 18. **From November 23, the account holders must be over 18 years old to be able to host a live stream on TikTok.
 
