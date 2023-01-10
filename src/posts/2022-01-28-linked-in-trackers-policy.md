@@ -2,12 +2,13 @@
 date: 2022-01-28
 platform: LinkedIn
 policy: Trackers Policy
-Author: Lara Müller
 slug: 2022-01-28-linked-in-trackers-policy
 author: "Lara Müller"
 ---
 
 # LinkedIn increases user transparency in regards to its Trackers Policy
+
+## More
 
 In the first quarter of 2022, LinkedIn [updated](https://github.com/OpenTermsArchive/contrib-versions/commit/139f902b972bdd1856ce3f446efb26c1a0dfec33) its Trackers Policy. The company added more examples of tracking devices such as pixels and local storage, while also emphasising that the names of “cookies and similar technologies may change over time”. 
 
@@ -15,6 +16,11 @@ The update **provided LinkedIn's users with more insight into the different type
 
 <<<<<<< HEAD
 The need for transparency about the usage of cookies can be traced back to privacy laws in the European Union which require platforms to inform EU visitors about cookies used on their website. According to [CookieLaw](https://www.cookielaw.org/the-cookie-law/), the law “was designed to protect online privacy, by making consumers aware of how information about them is collected and used online, and give them a choice to allow it or not”.
+<<<<<<< HEAD
 =======
 The need for transparency about the usage of cookies can be traced back to privacy laws in the European Union which require platforms to inform EU visitors about cookies used on their website. According to [CookieLaw](https://www.cookielaw.org/the-cookie-law/), the law “was designed to protect online privacy, by making consumers aware of how information about them is collected and used online, and give them a choice to allow it or not”.
 >>>>>>> 5a729219dfb057cac07068ccec550ce96705a8fd
+=======
+
+[Lara Müller]
+>>>>>>> parent of 1b4bfea (Cleaned up existing files)
