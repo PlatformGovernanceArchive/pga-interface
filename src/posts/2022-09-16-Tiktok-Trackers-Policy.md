@@ -4,6 +4,7 @@ platform: TikTok
 policy: Trackers Policy
 author: Kamila Ilimbayeva
 slug: 2022-09-16-Tiktok-Trackers-Policy
+author: "Christian Katzenbach"
 ---
 
 

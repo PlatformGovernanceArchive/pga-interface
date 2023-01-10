@@ -3,6 +3,7 @@ date: 2022-10-17
 platform: TikTok
 policy: Community Guidelines
 slug: 2022-10-07-TikTok-Age-Limit-Streaming
+author: "Christian Katzenbach"
 ---
 
 
