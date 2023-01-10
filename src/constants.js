@@ -97,6 +97,8 @@ export const DataAndResearch_DataAccess_Headline = `Data Access`;
 export const DataAndResearch_DataAccess_Text = `Forthcoming…
 
 (We will offer access to the full dataset towards the end of Q2-2021. We just need some more time to clean the data and to provide stable and accessible hosting of the data.)`;
+export const DataAndResearch_DataAccess_Button_Text = `Download all data`;
+export const DataAndResearch_DataAccess_Button_Url = `http://github.com`;
 
 export const DataAndResearch_Research_Headline = `Research`;
 export const DataAndResearch_Research_Text = `We use the Platform Governance Archive excessively in our research at the HIIG, specifically in the H2020 project “ReCreating Europe” on platform governance and copyright. As soon as the full dataset is available, we encourage you to use the dataset for your own research and to cite the data set and the accompanying data paper as a source.`;
@@ -106,7 +108,7 @@ export const DataAndResearch_Outlook_Text = `This early launch marks only the be
 
 // Update ticker
 
-export const Intro_Ticker_Headline = `Platform updates ticker`
-export const Intro_Ticker_Text = `We will post regular updates and short comments on changes, that platforms undertake on their policy documents.
+export const Intro_Ticker_Headline = `PGA Update Ticker`
+export const Intro_Ticker_Text = `The PGA Update Ticker provides regular updates and explanations on changes in platform policies. We are continuously monitoring changes in the platform policies that we cover, and writing short notes here to expose and explain these changes.
 
 Tellus in metus vulputate eu. Massa placerat duis ultricies lacus sed turpis tincidunt id. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Tincidunt vitae semper quis lectus nulla at volutpat diam. Egestas sed tempus urna et pharetra. Nunc lobortis mattis aliquam faucibus purus in massa tempor. Porttitor leo a diam sollicitudin tempor id.`
