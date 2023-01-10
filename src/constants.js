@@ -79,7 +79,7 @@ export const About_Funding_Headline = 'Funding';
 export const About_Funding_Text = `This is a project hosted and sustained by the Alexander von Humboldt Institute for Internet and Society (HIIG). The research and data collection part has substantially benefited from funding by the European Union’s Horizon 2020 research and innovation programme as part of the [*ReCreating Europe*](https://www.hiig.de/en/project/platform-governance-and-copyright/) consortium (Grant Agreement Number 870626). The [*Open Science Fellowship*](https://de.wikiversity.org/wiki/Wikiversity:Fellow-Programm_Freies_Wissen/Einreichungen/Platform_Governance_Archives) offered by Wikimedia Deutschland to João Carlos Magalhães was vital for the launch of the PGA by enabling concept building and data cleaning.`;
 
 //Data
-export const DataAndResearch_DataAccess_Headline = `Data Access`;
+export const Data_DataAccess_Headline = `Data Access`;
 export const DataAndResearch_DataAccess_Text = `Forthcoming…
 
 (We will offer access to the full dataset towards the end of Q2-2021. We just need some more time to clean the data and to provide stable and accessible hosting of the data.)`;
