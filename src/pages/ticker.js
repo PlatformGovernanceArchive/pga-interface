@@ -24,6 +24,7 @@ class Ticker extends React.Component {
   };
 
   async componentDidMount() {
+
     const posts = await Promise.all(
       markdownFiles.map((file) => fetch(file.default).then((res) => res.text()))
     ).catch((err) => console.error(err));
@@ -32,6 +33,13 @@ class Ticker extends React.Component {
     // parse md to frontmatter (data and content)
     const parsedPosts = posts && posts.map((p) => matter(p));
     this.setState((state) => ({ ...state, parsedPosts }));
+
+    console.log("hash", window.location.hash);
+    if (window.location.hash) {
+      const anchor = document.querySelector(`[id='${window.location.hash.substr(1)}']`);
+      console.log("anchor", anchor);
+      anchor.scrollIntoView();
+    }
   }
 
   renderers = {
@@ -141,8 +149,8 @@ class Ticker extends React.Component {
                       {linkIcon}
                     </h2>
                     <p>
-                      {post.data.platform}
-                      – {post.data.policy}
+                      {post.data.platform}<br />
+                      {post.data.policy}
                     </p>
                   </Col>
                   <Col className="colContent">

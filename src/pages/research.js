@@ -26,7 +26,7 @@ class Research extends React.Component {
           <section id="research">
             <Row>
               <Col sm="4" className="colTitle">
-                <h2>{Strings.Data_DataAccess_Headline}</h2>
+                <h2>{Strings.DataAndResearch_DataAccess_Headline}</h2>
               </Col>
               <Col className="colContent">
                 <ReactMarkdown
@@ -47,7 +47,13 @@ class Research extends React.Component {
                   source={Strings.DataAndResearch_DataAccess_Text}
                   renderers={this.renderers}
                 />
-                <a className="button" style={{display: "inline-block", alignSelf: "flex-start"}} href={Strings.DataAndResearch_DataAccess_Button_Url}>{Strings.DataAndResearch_DataAccess_Button_Text}</a>
+                <a
+                  className="button"
+                  style={{ display: "inline-block", alignSelf: "flex-start" }}
+                  href={Strings.DataAndResearch_DataAccess_Button_Url}
+                >
+                  {Strings.DataAndResearch_DataAccess_Button_Text}
+                </a>
               </Col>
             </Row>
           </section>
