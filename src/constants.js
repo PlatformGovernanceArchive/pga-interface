@@ -78,9 +78,24 @@ The project is inspired by Kirsten Gollatz’ pioneering work on the longitudina
 export const About_Funding_Headline = 'Funding';
 export const About_Funding_Text = `This is a project hosted and sustained by the Alexander von Humboldt Institute for Internet and Society (HIIG). The research and data collection part has substantially benefited from funding by the European Union’s Horizon 2020 research and innovation programme as part of the [*ReCreating Europe*](https://www.hiig.de/en/project/platform-governance-and-copyright/) consortium (Grant Agreement Number 870626). The [*Open Science Fellowship*](https://de.wikiversity.org/wiki/Wikiversity:Fellow-Programm_Freies_Wissen/Einreichungen/Platform_Governance_Archives) offered by Wikimedia Deutschland to João Carlos Magalhães was vital for the launch of the PGA by enabling concept building and data cleaning.`;
 
-//Data and Research
-export const DataAndResearch_Intro_Headline = 'Data and Research';
-export const DataAndResearch_Intro_Text = `Data for this project has been collected by a combination of automated and manual approaches. For the historical data, the process builds mostly on the [Internet Archive’s](https://archive.org/) [Wayback Machine](https://archive.org/web/). For the automated scraping of policy documents from Wayback Machine we have built a list of URLs where platforms publish their policies. These URLs have often changed over time, so the reconstruction of the full life-time of one policy document (eg. Facebook’s Community Guidelines) typically includes more than one URL. From these URLs, we scraped weekly snapshots that were saved to the raw version of the archive. To identify when actual changes within this corpus of raw data occured, we used a combination of automated and manual data filtering and diffchecking approaches. 
+// Data and Research
+// Keep this for working version and add new below
+export const DataAndResearch_DataAccess_Headline = `Data Access`;
+export const DataAndResearch_DataAccess_Text = `Forthcoming…
+
+(We will offer access to the full dataset towards the end of Q2-2021. We just need some more time to clean the data and to provide stable and accessible hosting of the data.)`;
+
+export const DataAndResearch_DataAccess_Button_Text = ` > Download all data`;
+export const DataAndResearch_DataAccess_Button_Url = `http://github.com`;
+
+
+export const DataAndResearch_DataPaper_Headline = `Data Paper`;
+export const DataAndResearch_DataPaper_Text = `Forthcoming...
+
+(We will publish in Q2-2021 a data paper that details the collection, cleaning and limitations of the data. The paper will also offer structural descriptions and analyses of the full dataset.)`;
+
+export const DataAndResearch_DataCollection_Headline = 'About Data Collection';
+export const DataAndResearch_DataCollection_Text = `Data for this project has been collected by a combination of automated and manual approaches. For the historical data, the process builds mostly on the [Internet Archive’s](https://archive.org/) [Wayback Machine](https://archive.org/web/). For the automated scraping of policy documents from Wayback Machine we have built a list of URLs where platforms publish their policies. These URLs have often changed over time, so the reconstruction of the full life-time of one policy document (eg. Facebook’s Community Guidelines) typically includes more than one URL. From these URLs, we scraped weekly snapshots that were saved to the raw version of the archive. To identify when actual changes within this corpus of raw data occured, we used a combination of automated and manual data filtering and diffchecking approaches. 
 
 The curated version of the PGA is based on the principle that “We detect a new version of a policy, if at least one word in the policy text changes”. This word-based approach excludes changes to the formatting and layout of the policy text, as well as changes to other site elements, such as the header, footer and sidebar elements. We furthermore excluded typo corrections and changes to the companies’ contact information (such as their street or email address) from counting as new policy versions.
 
@@ -88,18 +103,78 @@ We have collected data for ten major platforms and four different document types
 
 It's essential to remember that, given the limitations of the WayBack Machine and of companies' websites, not to mention eventual human mistakes in the collection and cleaning of the data, we do not claim our database is necessarily complete. Take that into consideration when reading and writing about the documents we compiled here. And let us know if you spot any issue, inconsistency or gap in our collection.`;
 
-export const DataAndResearch_DataPaper_Headline = `Data Paper`;
-export const DataAndResearch_DataPaper_Text = `Forthcoming...
 
-(We will publish in Q2-2021 a data paper that details the collection, cleaning and limitations of the data. The paper will also offer structural descriptions and analyses of the full dataset.)`;
-
-export const DataAndResearch_DataAccess_Headline = `Data Access`;
-export const DataAndResearch_DataAccess_Text = `Forthcoming…
-
-(We will offer access to the full dataset towards the end of Q2-2021. We just need some more time to clean the data and to provide stable and accessible hosting of the data.)`;
 
 export const DataAndResearch_Research_Headline = `Research`;
 export const DataAndResearch_Research_Text = `We use the Platform Governance Archive excessively in our research at the HIIG, specifically in the H2020 project “ReCreating Europe” on platform governance and copyright. As soon as the full dataset is available, we encourage you to use the dataset for your own research and to cite the data set and the accompanying data paper as a source.`;
 
 export const DataAndResearch_Outlook_Headline = `The Road Ahead`;
 export const DataAndResearch_Outlook_Text = `This early launch marks only the beginning of a long journey. In the next months, we will publish the dataset for re-use and a data paper for documentation. After that, we plan to start a second phase of the PGA that thrives to both extend the archive in terms of scope and language as well as to install a sustainable process and organization for updating the data archive continuously.`;
+
+// Data
+export const Data_DataAccess_Headline = `Data Access`;
+export const Data_DataAccess_Text = `Forthcoming…
+
+(We will offer access to the full dataset towards the end of Q2-2021. We just need some more time to clean the data and to provide stable and accessible hosting of the data.)`;
+
+export const Data_DataAccess_Button_Text = ` > Download all data`;
+export const Data_DataAccess_Button_Url = `http://github.com`;
+
+
+export const Data_DataPaper_Headline = `Data Paper`;
+export const Data_DataPaper_Text = `Forthcoming...
+
+(We will publish in Q2-2021 a data paper that details the collection, cleaning and limitations of the data. The paper will also offer structural descriptions and analyses of the full dataset.)`;
+
+export const Data_DataCollection_Headline = 'About Data Collection';
+export const Data_DataCollection_Text = `Data for this project has been collected by a combination of automated and manual approaches. For the historical data, the process builds mostly on the [Internet Archive’s](https://archive.org/) [Wayback Machine](https://archive.org/web/). For the automated scraping of policy documents from Wayback Machine we have built a list of URLs where platforms publish their policies. These URLs have often changed over time, so the reconstruction of the full life-time of one policy document (eg. Facebook’s Community Guidelines) typically includes more than one URL. From these URLs, we scraped weekly snapshots that were saved to the raw version of the archive. To identify when actual changes within this corpus of raw data occured, we used a combination of automated and manual data filtering and diffchecking approaches. 
+
+The curated version of the PGA is based on the principle that “We detect a new version of a policy, if at least one word in the policy text changes”. This word-based approach excludes changes to the formatting and layout of the policy text, as well as changes to other site elements, such as the header, footer and sidebar elements. We furthermore excluded typo corrections and changes to the companies’ contact information (such as their street or email address) from counting as new policy versions.
+
+We have collected data for ten major platforms and four different document types (terms of service, community guidelines, privacy policies, copyright policies). With this first release, we are starting with Facebook, YouTube, Twitter and Instagram – and will extend this collection in the weeks and months ahead.
+
+It's essential to remember that, given the limitations of the WayBack Machine and of companies' websites, not to mention eventual human mistakes in the collection and cleaning of the data, we do not claim our database is necessarily complete. Take that into consideration when reading and writing about the documents we compiled here. And let us know if you spot any issue, inconsistency or gap in our collection.`;
+
+
+
+export const Data_Research_Headline = `Research`;
+export const Data_Research_Text = `We use the Platform Governance Archive excessively in our research at the HIIG, specifically in the H2020 project “ReCreating Europe” on platform governance and copyright. As soon as the full dataset is available, we encourage you to use the dataset for your own research and to cite the data set and the accompanying data paper as a source.`;
+
+export const Data_Outlook_Headline = `The Road Ahead`;
+export const Data_Outlook_Text = `This early launch marks only the beginning of a long journey. In the next months, we will publish the dataset for re-use and a data paper for documentation. After that, we plan to start a second phase of the PGA that thrives to both extend the archive in terms of scope and language as well as to install a sustainable process and organization for updating the data archive continuously.`;
+
+
+// Research
+export const Research_Intro_Headline = 'Data and Research';
+export const Research_Intro_Text = `Data for this project has been collected by a combination of automated and manual approaches. For the historical data, the process builds mostly on the [Internet Archive’s](https://archive.org/) [Wayback Machine](https://archive.org/web/). For the automated scraping of policy documents from Wayback Machine we have built a list of URLs where platforms publish their policies. These URLs have often changed over time, so the reconstruction of the full life-time of one policy document (eg. Facebook’s Community Guidelines) typically includes more than one URL. From these URLs, we scraped weekly snapshots that were saved to the raw version of the archive. To identify when actual changes within this corpus of raw data occured, we used a combination of automated and manual data filtering and diffchecking approaches. 
+
+The curated version of the PGA is based on the principle that “We detect a new version of a policy, if at least one word in the policy text changes”. This word-based approach excludes changes to the formatting and layout of the policy text, as well as changes to other site elements, such as the header, footer and sidebar elements. We furthermore excluded typo corrections and changes to the companies’ contact information (such as their street or email address) from counting as new policy versions.
+
+We have collected data for ten major platforms and four different document types (terms of service, community guidelines, privacy policies, copyright policies). With this first release, we are starting with Facebook, YouTube, Twitter and Instagram – and will extend this collection in the weeks and months ahead.
+
+It's essential to remember that, given the limitations of the WayBack Machine and of companies' websites, not to mention eventual human mistakes in the collection and cleaning of the data, we do not claim our database is necessarily complete. Take that into consideration when reading and writing about the documents we compiled here. And let us know if you spot any issue, inconsistency or gap in our collection.`;
+
+export const Research_DataPaper_Headline = `Data Paper`;
+export const Research_DataPaper_Text = `Forthcoming...
+
+(We will publish in Q2-2021 a data paper that details the collection, cleaning and limitations of the data. The paper will also offer structural descriptions and analyses of the full dataset.)`;
+
+export const Research_DataAccess_Headline = `Data Access`;
+export const Research_DataAccess_Text = `Forthcoming…
+
+(We will offer access to the full dataset towards the end of Q2-2021. We just need some more time to clean the data and to provide stable and accessible hosting of the data.)`;
+export const Research_DataAccess_Button_Text = `Download all data`;
+export const Research_DataAccess_Button_Url = `http://github.com`;
+
+export const Research_Research_Headline = `Research`;
+export const Research_Research_Text = `We use the Platform Governance Archive excessively in our research at the HIIG, specifically in the H2020 project “ReCreating Europe” on platform governance and copyright. As soon as the full dataset is available, we encourage you to use the dataset for your own research and to cite the data set and the accompanying data paper as a source.`;
+
+export const Research_Outlook_Headline = `The Road Ahead`;
+export const Research_Outlook_Text = `This early launch marks only the beginning of a long journey. In the next months, we will publish the dataset for re-use and a data paper for documentation. After that, we plan to start a second phase of the PGA that thrives to both extend the archive in terms of scope and language as well as to install a sustainable process and organization for updating the data archive continuously.`;
+
+// Update ticker
+
+export const Intro_Ticker_Headline = `PGA Update Ticker`
+export const Intro_Ticker_Text = `The PGA Update Ticker provides regular updates and explanations on changes in platform policies. We are continuously monitoring changes in the platform policies that we cover, and writing short notes here to expose and explain these changes.
+
+Our coverage here is not comprehensive, and it only starts in mid-2022. So don't expect to find all interesting changes here – you need to explore yourself or consult our Research page.`
